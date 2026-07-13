@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module 3: Passwords & 2FA - Cybersecurity Basics</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="session.js"></script>
 </head>
 <body>
     <header class="animated-header">
@@ -271,6 +272,18 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
+            initSessionManager('module3');
+            createPauseButton();
+            
+            // Auto-save progress on interaction
+            document.addEventListener('click', function() {
+                sessionManager.saveProgress({ 
+                    module: 'module3',
+                    visitedAt: new Date().toISOString(),
+                    completed: false
+                });
+            });
+            
             initDabzr();
             showRandomResponse('welcome');
         });

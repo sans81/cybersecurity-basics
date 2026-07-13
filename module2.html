@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module 2: The Cyber Story - Cybersecurity Basics</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="session.js"></script>
 </head>
 <body>
     <header class="animated-header">
@@ -183,8 +184,20 @@
             });
         }
 
-        // Initialize Darbz
+        // Initialize Darbz and Session
         document.addEventListener('DOMContentLoaded', function() {
+            initSessionManager('module2');
+            createPauseButton();
+            
+            // Auto-save progress on interaction
+            document.addEventListener('click', function() {
+                sessionManager.saveProgress({ 
+                    module: 'module2',
+                    visitedAt: new Date().toISOString(),
+                    completed: false
+                });
+            });
+            
             initDabzr();
             showRandomResponse('welcome');
         });

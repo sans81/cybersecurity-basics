@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module 6: Final Challenge - Cybersecurity Basics</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="session.js"></script>
 </head>
 <body>
     <header class="animated-header">
@@ -264,6 +265,18 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
+            initSessionManager('module6');
+            createPauseButton();
+            
+            // Auto-save progress on interaction
+            document.addEventListener('click', function() {
+                sessionManager.saveProgress({ 
+                    module: 'module6',
+                    visitedAt: new Date().toISOString(),
+                    completed: false
+                });
+            });
+            
             initDabzr();
             displayQuestion();
             showRandomResponse('welcome');

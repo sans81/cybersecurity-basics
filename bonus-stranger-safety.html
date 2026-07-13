@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bonus: Internet Stranger Safety - Cybersecurity Basics</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="session.js"></script>
 </head>
 <body>
     <header class="animated-header">
@@ -392,6 +393,18 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
+            initSessionManager('bonus-stranger');
+            createPauseButton();
+            
+            // Auto-save progress on interaction
+            document.addEventListener('click', function() {
+                sessionManager.saveProgress({ 
+                    module: 'bonus-stranger',
+                    visitedAt: new Date().toISOString(),
+                    completed: false
+                });
+            });
+            
             initDabzr();
             displayScenario();
             showRandomResponse('welcome');

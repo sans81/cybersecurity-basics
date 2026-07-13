@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Module 4: Phishing Detective - Cybersecurity Basics</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="session.js"></script>
 </head>
 <body>
     <header class="animated-header">
@@ -300,6 +301,18 @@
         }
 
         document.addEventListener('DOMContentLoaded', function() {
+            initSessionManager('module4');
+            createPauseButton();
+            
+            // Auto-save progress on interaction
+            document.addEventListener('click', function() {
+                sessionManager.saveProgress({ 
+                    module: 'module4',
+                    visitedAt: new Date().toISOString(),
+                    completed: false
+                });
+            });
+            
             initDabzr();
             displayEmail();
             showRandomResponse('welcome');
