@@ -810,15 +810,89 @@ footer p {
   margin-bottom: 10px;
 }
 
+@media (max-width: 1024px) {
+  header { padding: 20px 15px; }
+  .nav-container { flex-wrap: wrap; }
+  nav { flex-wrap: wrap; gap: 10px; }
+  .container { max-width: 95%; }
+  section { padding: 25px 15px; }
+}
+
 @media (max-width: 768px) {
-  section { padding: 20px; }
-  .page-title { font-size: 32px; }
-  h2 { font-size: 28px; }
+  html { font-size: 14px; }
+  section { padding: 20px 15px; }
+  .page-title { font-size: 28px; }
+  h2 { font-size: 24px; }
+  h3 { font-size: 18px; }
   nav { gap: 8px; }
   nav a, nav button { padding: 8px 12px; font-size: 12px; }
   .mascot { width: 80px; height: 80px; font-size: 48px; }
-  .speech-bubble { max-width: 180px; font-size: 12px; }
+  .speech-bubble { max-width: 180px; font-size: 12px; padding: 10px; }
   .email-buttons { flex-direction: column; }
-  .certificate { padding: 20px; }
+  .scenario-buttons { flex-direction: column; }
+  .certificate { padding: 20px; border-width: 5px; }
   .protection-steps { grid-template-columns: 1fr; }
+  .card-grid { grid-template-columns: 1fr; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .grid-3 { grid-template-columns: 1fr; }
+  .game-card { padding: 15px; }
+  .pause-button { right: 10px; top: 10px; padding: 10px 12px; font-size: 12px; }
+  .resume-banner-content { flex-direction: column; align-items: flex-start; }
+  .resume-buttons { width: 100%; }
+  .resume-btn-yes, .resume-btn-no { flex: 1; }
+  .challenge-container { padding: 15px; }
+}
+
+@media (max-width: 480px) {
+  html { font-size: 13px; }
+  header { padding: 15px 10px; }
+  .nav-container { flex-direction: column; gap: 10px; }
+  nav { width: 100%; flex-wrap: wrap; }
+  nav a, nav button { padding: 6px 10px; font-size: 11px; flex: 1; }
+  .page-title { font-size: 24px; }
+  h2 { font-size: 20px; }
+  h3 { font-size: 16px; }
+  section { padding: 15px 10px; }
+  .container { margin: 0; }
+  .mascot { width: 60px; height: 60px; font-size: 36px; }
+  .speech-bubble { max-width: 140px; font-size: 11px; padding: 8px; }
+  .darbz-container { bottom: 10px; right: 10px; }
+  .game-card { padding: 12px; }
+  .game-icon { font-size: 40px; }
+  .game-card h3 { font-size: 16px; }
+  .game-card p { font-size: 12px; }
+  .email-card { padding: 15px; }
+  .email-header { padding: 10px; }
+  .email-body { padding: 10px; font-size: 13px; min-height: 50px; }
+  .btn-real, .btn-phishing, .update-button { padding: 10px 15px; font-size: 13px; }
+  .challenge-container { padding: 12px; }
+  .quiz-option { padding: 10px; font-size: 13px; }
+  .certificate { padding: 15px; margin: 15px 0; }
+  .certificate-header { font-size: 18px; }
+  .certificate-body { font-size: 12px; }
+  .darbz-large { font-size: 50px; min-width: 80px; }
+  .darbz-speech-large { padding: 15px; font-size: 13px; }
+  .pause-modal-content { padding: 25px 20px; margin: 15px; }
+  .pause-modal-content h2 { font-size: 22px; }
+  .scenario-card { padding: 15px; }
+  .timeline-item { padding: 15px; }
+  .password-checker { padding: 15px; }
+  .strength-meter { height: 8px; margin-bottom: 8px; }
+  .protection-steps { grid-template-columns: 1fr; gap: 12px; }
+  .step-card { padding: 12px; }
+  .step-number { font-size: 28px; }
+}
+
+@media (max-width: 320px) {
+  html { font-size: 12px; }
+  header { padding: 12px 8px; }
+  nav a, nav button { padding: 5px 8px; font-size: 10px; }
+  .page-title { font-size: 20px; }
+  h2 { font-size: 18px; }
+  h3 { font-size: 14px; }
+  section { padding: 12px 8px; }
+  .game-icon { font-size: 32px; }
+  .certificate { padding: 12px; }
+  .darbz-large { font-size: 40px; }
+  .pause-button { padding: 8px 10px; font-size: 11px; }
 }
