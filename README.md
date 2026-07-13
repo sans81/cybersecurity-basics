@@ -64,44 +64,6 @@ After exploring this site, you will understand:
 - **Organizations** - Use as employee security awareness training
 - **Parents** - Teach children about online safety
 
-## 🌐 Access the Site
-
-The website is deployed and accessible online. Simply open `index.html` in any modern web browser, or deploy it using services like:
-- GitHub Pages
-- Netlify
-- Vercel
-- Firebase Hosting
-
-## 💻 Getting Started
-
-### Local Development
-```bash
-# Clone the repository
-git clone https://github.com/sans81/cybersecurity-basics.git
-
-# Navigate to the directory
-cd cybersecurity-basics
-
-# Open in browser
-open index.html  # macOS
-start index.html # Windows
-```
-
-### Deployment
-Since this is a single-file static website, you can deploy it anywhere:
-
-1. **GitHub Pages** - Free, built-in hosting
-2. **Netlify** - Drag & drop deployment
-3. **Vercel** - One-click deployment
-4. **Firebase Hosting** - Google-backed free hosting
-
-## 📋 Repository Contents
-
-```
-cybersecurity-basics/
-├── index.html      # Complete interactive website (all-in-one file)
-└── README.md       # This file
-```
 
 ## 🎓 Curriculum
 
