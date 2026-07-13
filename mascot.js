@@ -1,9 +1,9 @@
-// Dabzr - The Chocolate Lab Puppy Mascot
+// Darbz - The Chocolate Lab Puppy Mascot
 // A friendly, funny, and educational companion
 
-const DABZR_RESPONSES = {
+const Darbz_RESPONSES = {
   welcome: [
-    "Woof! 🐕 Hey buddy! I'm Dabzr, your cyber puppy sidekick!",
+    "Woof! 🐕 Hey buddy! I'm Darbz, your cyber puppy sidekick!",
     "Bark bark! 🎓 Ready to learn some awesome cybersecurity stuff?",
     "Ruff! 🔒 Let's protect the internet together!",
     "Woof woof! 🐕 I'm so excited to learn with you!",
@@ -97,7 +97,7 @@ function playTone(audioContext, frequency, duration) {
 }
 
 // Mascot Initialization
-function initDabzr() {
+function initDarbz() {
   const mascotContainer = document.querySelector('.mascot-container');
   
   if (!mascotContainer) {
@@ -119,7 +119,7 @@ function initDabzr() {
 
 // Display Response
 function showRandomResponse(category) {
-  const responses = DABZR_RESPONSES[category] || DABZR_RESPONSES.random;
+  const responses = Darbz_RESPONSES[category] || Darbz_RESPONSES.random;
   const response = responses[Math.floor(Math.random() * responses.length)];
   displayResponse(response);
 }
@@ -182,4 +182,4 @@ function checkAnswer(element, isCorrect, category = null) {
 }
 
 // Initialize on page load
-document.addEventListener('DOMContentLoaded', initDabzr);
+document.addEventListener('DOMContentLoaded', initDarbz);

@@ -1,8 +1,8 @@
-# 🔒 Cybersecurity Basics for Kids with Dabzr
+# 🔒 Cybersecurity Basics for Kids with Darbz
 
-## 🐕 Hey There! It's Dabzr Here! 🐕
+## 🐕 Hey There! It's Darbz Here! 🐕
 
-*Woof woof!* 👋 Hi buddy! I'm **Dabzr**, your chocolate lab puppy sidekick! 🍫
+*Woof woof!* 👋 Hi buddy! I'm **Darbz**, your chocolate lab puppy sidekick! 🍫
 
 I'm SO EXCITED to teach you about cybersecurity! 🎓 Don't worry - I'll make it FUN, PAWSOME, and super easy to understand! 
 
@@ -16,7 +16,7 @@ This is an **open-source, interactive educational website** designed to teach ki
 
 ### What Makes This Special:
 
-✨ **Dabzr's Humor** - Light, funny, and encouraging messages from your puppy pal  
+✨ **Darbz's Humor** - Light, funny, and encouraging messages from your puppy pal  
 🎮 **Interactive Games** - Spot threats, build passwords, catch phishing emails  
 🔊 **Sound Effects** - Celebrate correct answers with fun beeps and barks!  
 🌈 **Beautiful Design** - Colorful, animated, and kid-friendly  
@@ -59,7 +59,7 @@ This is an **open-source, interactive educational website** designed to teach ki
 ### Module 6: 🏆 Final Challenge
 - Comprehensive quiz combining all modules
 - Test ALL your cyber superpowers
-- **Reward**: Certificate and Dabzr celebration!
+- **Reward**: Certificate and Darbz celebration!
 
 ---
 
@@ -95,31 +95,31 @@ cybersecurity-basics/
 ├── module5.html        # Module 5: Updates & Protection (coming soon)
 ├── module6.html        # Module 6: Final Challenge (coming soon)
 ├── styles.css          # Shared responsive styles
-├── mascot.js           # Dabzr personality & sound effects
+├── mascot.js           # Darbz personality & sound effects
 ├── README.md           # This file
 └── assets/             # Images and educational graphics (coming soon)
 ```
 
 ---
 
-## 🐕 About Dabzr
+## 🐕 About Darbz
 
-**Dabzr** is your friendly chocolate lab puppy companion! 🍫🐕
+**Darbz** is your friendly chocolate lab puppy companion! 🍫🐕
 
-### Dabzr's Personality:
+### Darbz's Personality:
 - 🎉 **Encouraging** - Celebrates your successes!
 - 😄 **Funny** - Makes you smile while learning
 - 🤝 **Supportive** - Cheers you on through tough questions
 - 🎓 **Smart** - Gives tips about cybersecurity concepts
 - 🐾 **Adorable** - Adorable wiggling animation!
 
-### Talk to Dabzr:
+### Talk to Darbz:
 - Click the puppy on the right side of any page! 🐕
-- Dabzr will bark, give tips, and make you laugh
+- Darbz will bark, give tips, and make you laugh
 - Each response is unique and fun
 - Get different messages for correct/incorrect answers
 
-**Sample Dabzr Messages:**
+**Sample Darbz Messages:**
 - ✅ "WOOF WOOF! That's PAWSOME! You got it right!"
 - ❌ "Awww... Not quite, but you'll get it! Try again!"
 - 📚 "Woof! Passwords are like my SECRET TREAT HIDING SPOT!"
@@ -140,7 +140,7 @@ cybersecurity-basics/
 ### Sound Effects:
 - 🔊 **Correct Answer**: Ascending beep (bing! bing! bing!)
 - 🔊 **Incorrect Answer**: Descending buzz (error sound)
-- 🔊 **Dog Bark**: Playful woof when you click Dabzr
+- 🔊 **Dog Bark**: Playful woof when you click Darbz
 
 All sounds are created with **Web Audio API** - no downloads needed!
 
@@ -193,7 +193,7 @@ This is educational content for learning cybersecurity fundamentals. For serious
 - 🏅 Achievement badges
 - 🗣️ Multi-language support
 - 📱 Mobile app version
-- 🤖 AI-powered tips from Dabzr
+- 🤖 AI-powered tips from Darbz
 - 📚 Downloadable study guides
 
 ---
@@ -207,7 +207,7 @@ If you'd like to:
 - 💡 Suggest new content or games
 - 🎨 Improve the design
 - 📝 Fix typos or add content
-- 🐕 Send Dabzr fan art!
+- 🐕 Send Darbz fan art!
 
 Feel free to open an issue or submit a pull request!
 
@@ -219,7 +219,7 @@ This educational content is shared freely for learning purposes. Use, modify, an
 
 ---
 
-## 🐕 Special Message from Dabzr
+## 🐕 Special Message from Darbz
 
 *Bark bark woof!* 🐕
 
@@ -240,5 +240,5 @@ This educational content is shared freely for learning purposes. Use, modify, an
 
 **Last Updated**: July 2026  
 **Status**: 🟢 Active & Maintained  
-**Companion**: Dabzr the Chocolate Lab 🍫🐕
+**Companion**: Darbz the Chocolate Lab 🍫🐕
 
