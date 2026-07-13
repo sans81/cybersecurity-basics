@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bonus: Internet Stranger Safety - Cybersecurity Basics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="animated-header">
+        <nav class="nav-breadcrumb">
+            <a href="index.html">🏠 Home</a> / <span>Bonus: Internet Stranger Safety</span>
+        </nav>
+        <h1>🚨 Stranger Danger Online</h1>
+        <p class="subtitle">Learn why talking to strangers on the internet can be dangerous! 🛑</p>
+    </header>
+
+    <main class="module-container">
+        <!-- Intro -->
+        <section class="intro-section">
+            <h2>⚠️ Important Safety Lesson!</h2>
+            <p>The internet is AWESOME, but like real life, there are strangers you should NOT talk to! 👥</p>
+            <p style="color: #ff6348; font-weight: bold;">Let Darbz tell you why this is so important! 👇</p>
+        </section>
+
+        <!-- Interactive Darbz Explanation -->
+        <section class="darbz-talk-section">
+            <div class="darbz-large-container">
+                <div class="darbz-large">🐕</div>
+                <div class="darbz-speech-large">
+                    <h3 style="color: #ff6b9d; margin-bottom: 15px;">Woof! Listen Up, Buddy!</h3>
+                    <p style="margin-bottom: 12px;">
+                        <strong>I'm Darbz, and I need to talk to you about something REALLY important!</strong>
+                    </p>
+                    <p style="margin-bottom: 12px;">
+                        You know how in real life, your parents say DON'T talk to strangers? Like if someone you don't know comes up to you on the street?
+                    </p>
+                    <p style="margin-bottom: 12px;">
+                        <strong>🌐 THE INTERNET IS THE SAME WAY!</strong> But it's even TRICKIER because:
+                    </p>
+                    <ul style="text-align: left; display: inline-block; margin-bottom: 15px; line-height: 1.8;">
+                        <li>😷 You can't see who they really are</li>
+                        <li>🎭 They can pretend to be anyone</li>
+                        <li>🤥 They might lie about who they are</li>
+                        <li>💰 Some try to get your information</li>
+                        <li>😟 They might try to hurt your feelings</li>
+                    </ul>
+                    <p style="margin-bottom: 12px; background: #ffe8e8; padding: 12px; border-radius: 8px; border-left: 4px solid #ff6348;">
+                        <strong>⚠️ BARK BARK! That's why you should:</strong><br>
+                        ✅ NEVER give personal info to strangers<br>
+                        ✅ NEVER meet someone from the internet IRL<br>
+                        ✅ ALWAYS tell a trusted adult!
+                    </p>
+                    <p style="margin-top: 15px; font-style: italic;">
+                        *Darbz wags tail seriously* 🐕 This is important stuff!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stranger Scenarios Game -->
+        <section class="game-section">
+            <h2>🎮 Can You Spot the Stranger Danger?</h2>
+            <p>Read each message. Is this a SAFE interaction or STRANGER DANGER? Click your answer!</p>
+            
+            <div id="scenario-game" class="scenario-container">
+                <!-- Scenarios will be inserted by JavaScript -->
+            </div>
+            
+            <div id="scenario-result" class="game-score hidden">
+                <h3>🎉 Quiz Complete!</h3>
+                <p id="scenario-text"></p>
+                <button onclick="resetScenarioGame()" class="reset-button">Try Again</button>
+            </div>
+        </section>
+
+        <!-- Red Flags Section -->
+        <section class="info-section">
+            <h2>🚩 RED FLAGS - WHEN TO SAY NO!</h2>
+            
+            <div class="card-grid">
+                <div class="red-flag-card">
+                    <h3>🚩 "What's Your Real Name?"</h3>
+                    <p>Strangers asking personal info = DANGER!</p>
+                    <p style="color: #ff6348; font-weight: bold;">Say NO!</p>
+                </div>
+                
+                <div class="red-flag-card">
+                    <h3>🚩 "Send Me a Photo"</h3>
+                    <p>Anyone asking for pictures = RED FLAG!</p>
+                    <p style="color: #ff6348; font-weight: bold;">Say NO & tell an adult!</p>
+                </div>
+                
+                <div class="red-flag-card">
+                    <h3>🚩 "Where Do You Live?"</h3>
+                    <p>Questions about location = DANGER!</p>
+                    <p style="color: #ff6348; font-weight: bold;">Say NO!</p>
+                </div>
+                
+                <div class="red-flag-card">
+                    <h3>🚩 "Let's Keep This Secret"</h3>
+                    <p>Secrets from parents = BIG RED FLAG!</p>
+                    <p style="color: #ff6348; font-weight: bold;">Tell an adult IMMEDIATELY!</p>
+                </div>
+                
+                <div class="red-flag-card">
+                    <h3>🚩 "You're So Mature"</h3>
+                    <p>Adults giving weird compliments = DANGER!</p>
+                    <p style="color: #ff6348; font-weight: bold;">Block & tell an adult!</p>
+                </div>
+                
+                <div class="red-flag-card">
+                    <h3>🚩 "Meet Me in Person"</h3>
+                    <p>Internet person wanting to meet = NO WAY!</p>
+                    <p style="color: #ff6348; font-weight: bold;">Say NO & tell parents!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Safe Practices -->
+        <section class="warning-section">
+            <h2>✅ STAY SAFE ONLINE!</h2>
+            
+            <div class="protection-steps">
+                <div class="step-card">
+                    <div class="step-number">1️⃣</div>
+                    <h3>Talk to Trusted Adults</h3>
+                    <p>Tell parents about who you chat with</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2️⃣</div>
+                    <h3>Never Share Personal Info</h3>
+                    <p>No name, address, school, or phone!</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3️⃣</div>
+                    <h3>No Pictures with Strangers</h3>
+                    <p>Keep your photos private & safe</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4️⃣</div>
+                    <h3>Block & Report</h3>
+                    <p>If someone seems creepy, block them!</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">5️⃣</div>
+                    <h3>Tell Adults About Red Flags</h3>
+                    <p>Parents & teachers WANT to help!</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-number">6️⃣</div>
+                    <h3>Remember: You're AWESOME!</h3>
+                    <p>You don't owe strangers anything!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz -->
+        <section class="quiz-section">
+            <h2>🧠 Test Your Stranger Safety Knowledge!</h2>
+            
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    <p><strong>Question 1:</strong> Someone online asks your real name. What do you do?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'encouragement')">Tell them your real name</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, true, 'encouragement')">Say NO and tell an adult</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'encouragement')">Make up a fake name and keep talking</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'encouragement')">Block them but don't tell anyone</div>
+                    </div>
+                    <div id="q1-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 2:</strong> A stranger says "Let's keep this secret from your parents." What's this?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, true, 'encouragement')">A BIG RED FLAG - tell an adult NOW!</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'encouragement')">Just a normal conversation</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'encouragement')">Fun and exciting</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'encouragement')">A game</div>
+                    </div>
+                    <div id="q2-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 3:</strong> What information should you NEVER share with strangers online?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'encouragement')">Your favorite video game</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, true, 'encouragement')">Your real name, address, school, or phone number</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'encouragement')">Your favorite animal</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'encouragement')">Your favorite color</div>
+                    </div>
+                    <div id="q3-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 4:</strong> Someone says "You're so mature for your age" - what do you do?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, true, 'encouragement')">Block them and tell an adult - this is a red flag!</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'encouragement')">Feel happy and keep talking to them</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'encouragement')">Ask them more questions</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'encouragement')">Tell your friends about it</div>
+                    </div>
+                    <div id="q4-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 5:</strong> An internet stranger wants to meet you in person. What do you say?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'encouragement')">Sure! That sounds fun!</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'encouragement')">Maybe if my friends come too</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, true, 'encouragement')">ABSOLUTELY NOT! Tell an adult immediately!</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'encouragement')">Let me think about it</div>
+                    </div>
+                    <div id="q5-feedback"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Darbz Safety Message -->
+        <section class="fun-fact-section">
+            <div class="darbz-message-card">
+                <h3>🐕 Darbz's Final Safety Message</h3>
+                <p style="font-size: 18px; margin-top: 15px;">
+                    <strong>"Remember buddy:</strong>
+                </p>
+                <ul style="text-align: left; display: inline-block; line-height: 2; margin-top: 15px;">
+                    <li>🛡️ Your SAFETY comes first!</li>
+                    <li>💪 You're BRAVE for saying NO!</li>
+                    <li>🤝 Adults WANT to help you!</li>
+                    <li>🐾 I'm here to protect you!</li>
+                    <li>❤️ You are AWESOME & WORTH PROTECTING!</li>
+                </ul>
+                <p style="margin-top: 20px; font-style: italic; color: #ff6b9d;">
+                    *Darbz gives you a protective puppy hug* 🐕❤️
+                </p>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <section class="module-nav">
+            <a href="module6.html" class="nav-button prev">← Module 6: Final Challenge</a>
+            <a href="index.html" class="nav-button next">Home 🏠</a>
+        </section>
+    </main>
+
+    <!-- Darbz Mascot -->
+    <div id="darbz-container" class="darbz-container">
+        <div class="darbz-mascot" onclick="toggleDarbzSpeech()">
+            🐕
+        </div>
+        <div id="darbz-speech" class="darbz-speech hidden">
+            <p id="darbz-message">Click me to hear from Darbz!</p>
+            <div class="speech-pointer"></div>
+        </div>
+    </div>
+
+    <script src="mascot.js"></script>
+    <script>
+        const scenarios = [
+            {
+                message: "Random user: 'Hey! What's your name?'",
+                context: "A stranger in an online game asks your real name",
+                isSafe: false,
+                reason: "Strangers should never ask for your real name"
+            },
+            {
+                message: "Friend from school: 'Want to play Minecraft together on the server?'",
+                context: "A kid from your school invites you to play",
+                isSafe: true,
+                reason: "You know them from real life - this is safe!"
+            },
+            {
+                message: "Unknown user: 'Send me a picture of you'",
+                context: "Someone you don't know asks for your photo",
+                isSafe: false,
+                reason: "NEVER send pictures to people you don't know!"
+            },
+            {
+                message: "Stranger: 'What school do you go to? We can be friends!'",
+                context: "Random person asking personal info",
+                isSafe: false,
+                reason: "This is asking for location info - DANGER!"
+            },
+            {
+                message: "Your parent: 'Hi sweetie, how was your day?'",
+                context: "Your mom/dad messaging you",
+                isSafe: true,
+                reason: "Your parents are people you trust!"
+            },
+            {
+                message: "Stranger: 'Don't tell your parents we chat. It's our secret!'",
+                context: "Someone asking you to keep secrets",
+                isSafe: false,
+                reason: "BIGGEST RED FLAG! Tell an adult immediately!"
+            }
+        ];
+
+        let currentScenario = 0;
+        let scenarioScore = 0;
+
+        function displayScenario() {
+            if (currentScenario >= scenarios.length) {
+                showScenarioResult();
+                return;
+            }
+
+            const scenario = scenarios[currentScenario];
+            const gameContainer = document.getElementById('scenario-game');
+            
+            gameContainer.innerHTML = `
+                <div class="scenario-card">
+                    <div class="scenario-message">
+                        "${scenario.message}"
+                    </div>
+                    <div class="scenario-context">
+                        <strong>Context:</strong> ${scenario.context}
+                    </div>
+                    <div class="scenario-buttons">
+                        <button onclick="answerScenario(${currentScenario}, true)" class="btn-safe">✅ SAFE</button>
+                        <button onclick="answerScenario(${currentScenario}, false)" class="btn-danger">🚨 DANGER!</button>
+                    </div>
+                    <div class="scenario-progress">Scenario ${currentScenario + 1} of ${scenarios.length}</div>
+                </div>
+            `;
+        }
+
+        function answerScenario(index, userSaysSafe) {
+            const scenario = scenarios[index];
+            const isCorrect = userSaysSafe === scenario.isSafe;
+            
+            if (isCorrect) {
+                scenarioScore++;
+                playSound('correct');
+                showRandomResponse('encouragement');
+            } else {
+                playSound('incorrect');
+                showRandomResponse('encouragement');
+            }
+
+            setTimeout(() => {
+                currentScenario++;
+                displayScenario();
+            }, 1500);
+        }
+
+        function showScenarioResult() {
+            const resultDiv = document.getElementById('scenario-result');
+            const resultText = document.getElementById('scenario-text');
+            const percentage = (scenarioScore / scenarios.length) * 100;
+            
+            resultText.textContent = `You got ${scenarioScore} out of ${scenarios.length} correct! (${percentage.toFixed(0)}%) You're learning to stay safe! 🛡️`;
+            resultDiv.classList.remove('hidden');
+            document.getElementById('scenario-game').innerHTML = '';
+            
+            playSound('correct');
+            showRandomResponse('random');
+        }
+
+        function resetScenarioGame() {
+            currentScenario = 0;
+            scenarioScore = 0;
+            document.getElementById('scenario-result').classList.add('hidden');
+            displayScenario();
+        }
+
+        function checkAnswer(element, isCorrect, category) {
+            element.classList.add(isCorrect ? 'correct' : 'incorrect');
+            
+            const question = element.closest('.quiz-question');
+            const feedbackDiv = question.querySelector('[id$="-feedback"]');
+            
+            if (isCorrect) {
+                feedbackDiv.innerHTML = '<div class="feedback-message correct-feedback">✅ Correct! You\'re staying safe!</div>';
+                playSound('correct');
+                showRandomResponse(category);
+            } else {
+                feedbackDiv.innerHTML = '<div class="feedback-message incorrect-feedback">❌ Try again! Safety first!</div>';
+                playSound('incorrect');
+                showRandomResponse('encouragement');
+            }
+            
+            question.querySelectorAll('.quiz-option').forEach(opt => {
+                opt.style.pointerEvents = 'none';
+                opt.style.opacity = '0.6';
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initDabzr();
+            displayScenario();
+            showRandomResponse('welcome');
+        });
+
+        function toggleDarbzSpeech() {
+            const speech = document.getElementById('darbz-speech');
+            speech.classList.toggle('hidden');
+            playSound('bark');
+            showRandomResponse('random');
+        }
+    </script>
+
+    <style>
+        .darbz-talk-section {
+            padding: 30px 20px;
+            background: linear-gradient(135deg, #fff5f7 0%, #fff 100%);
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .darbz-large-container {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .darbz-large {
+            font-size: 80px;
+            min-width: 100px;
+            text-align: center;
+            animation: bounce 2s infinite;
+        }
+
+        .darbz-speech-large {
+            background: white;
+            border: 3px solid #ff6b9d;
+            border-radius: 12px;
+            padding: 20px;
+            flex: 1;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+
+        .scenario-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .scenario-message {
+            background: linear-gradient(135deg, #f0f4ff 0%, #fff 100%);
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            font-style: italic;
+        }
+
+        .scenario-context {
+            background: #f9f9f9;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .scenario-buttons {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .btn-safe {
+            flex: 1;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-safe:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(67, 233, 123, 0.3);
+        }
+
+        .btn-danger {
+            flex: 1;
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #ff6348 0%, #ff4757 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-danger:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 67, 87, 0.3);
+        }
+
+        .scenario-progress {
+            text-align: center;
+            font-size: 14px;
+            color: #667eea;
+            font-weight: 600;
+        }
+
+        .darbz-message-card {
+            background: linear-gradient(135deg, #fff5f7 0%, #fff 100%);
+            border: 3px solid #ff6b9d;
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .darbz-message-card h3 {
+            color: #ff6b9d;
+            font-size: 24px;
+        }
+
+        @media (max-width: 768px) {
+            .darbz-large-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .darbz-large {
+                font-size: 60px;
+            }
+
+            .darbz-speech-large {
+                width: 100%;
+            }
+
+            .scenario-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</body>
+</html>
