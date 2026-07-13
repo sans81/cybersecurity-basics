@@ -1,59 +1,64 @@
-// Darbz - The Chocolate Lab Puppy Mascot
-// A friendly, funny, and educational companion
+// Darbz - Your Cybersecurity Guide
+// A supportive and educational companion
 
 const Darbz_RESPONSES = {
   welcome: [
-    "Woof! 🐕 Hey buddy! I'm Darbz, your cyber puppy sidekick!",
-    "Bark bark! 🎓 Ready to learn some awesome cybersecurity stuff?",
-    "Ruff! 🔒 Let's protect the internet together!",
-    "Woof woof! 🐕 I'm so excited to learn with you!",
+    "Hey! I'm Darbz. Ready to learn real cybersecurity? 🔒",
+    "Let's protect the internet together. You've got this. 💪",
+    "Welcome to the course. Let's make you a security expert.",
+    "I'm here to help you understand digital safety.",
   ],
   correct: [
-    "WOOF WOOF! 🎉 That's PAWSOME! You got it right!",
-    "Bark bark! 🌟 You're a CYBER DOG EXPERT!",
-    "Ruff! 🏆 That's RIGHT! Give yourself a treat!",
-    "Woof! 🐕 You nailed it! *tail wagging intensifies*",
-    "Bark bark! 💪 You're CRUSHING it!",
-    "Ruff ruff! 🎊 BONE-US POINTS FOR YOU!",
+    "Excellent! You got that right. 🎯",
+    "That's correct! You're getting it. 💡",
+    "Perfect! You understand this well. 🏆",
+    "Correct! Your cyber security knowledge is growing. 📈",
+    "Great job! You nailed that. ✓",
+    "That's the right answer. Keep this momentum going!",
   ],
   incorrect: [
-    "Awww... 🐶 Not quite, but you'll get it! Try again!",
-    "Woof woof 🤔 Hmm, that's not it... but no worries!",
-    "Bark bark 😅 Oopsie! Let's try again!",
-    "Ruff! 📖 Check the lesson again - you got this!",
+    "Not quite. Review the concept and try again. 📖",
+    "That's not it, but you're on the right track. Try once more.",
+    "Close, but not correct. Let's look at this again.",
+    "Not this time. But learning is about practice!",
   ],
   password: [
-    "Woof! 🔐 Passwords are like my SECRET TREAT HIDING SPOT!",
-    "Bark bark! 🐕 Use LONG passwords with MIX-UPS!",
-    "Ruff! 💪 Strong passwords = STRONG PROTECTION!",
+    "Strong passwords are your first line of defense.",
+    "Mix uppercase, lowercase, numbers, and symbols for real security.",
+    "Length matters. Aim for 12+ characters minimum.",
+    "Never use personal information or common words.",
   ],
   phishing: [
-    "WOOF WOOF! 🚨 That's phishing! I never click links from strangers!",
-    "Bark bark! ⚠️ That email LOOKS FISHY! 🐟",
-    "Ruff! 🎣 Even we puppy experts can be tricked!",
+    "That email is definitely suspicious. Good catch! 🎣",
+    "Phishing emails try to trick you into revealing passwords.",
+    "Always check the sender address carefully.",
+    "When in doubt, don't click. That's the safe choice.",
   ],
-  twofactor: [
-    "Woof! 🔐🔐 Two locks = TWICE the SECURITY!",
-    "Bark bark! 📱 2FA is like having a SUPER GUARD!",
-    "Ruff! 🛡️ Double protection = DOUBLE PAWSOME!",
+  twofa: [
+    "2FA adds serious protection to your accounts. Smart move.",
+    "Two-Factor Authentication: something you know + something you have.",
+    "Enabling 2FA significantly reduces account compromise risk.",
+    "Most attacks fail when 2FA is enabled. Use it everywhere.",
   ],
   updates: [
-    "Woof! ⚡ ALWAYS update! It's like getting STRONGER!",
-    "Bark bark! 🔄 Updates = PROTECTION UPGRADE!",
-    "Ruff! 💪 New patches = NEW SUPERPOWERS!",
+    "Updates aren't just new features—they patch security holes.",
+    "Hackers exploit known vulnerabilities. Staying updated matters.",
+    "Apply security updates as soon as they're available.",
+    "Outdated software is one of the biggest security risks.",
   ],
   random: [
-    "Woof! 🐕 Did you know? I'm a chocolate lab!",
-    "Bark bark! 🍫 My favorite thing? Chocolate AND SECURITY!",
-    "Ruff! 🦴 Want to pet me? Just don't hack my treat jar!",
-    "Woof woof! 🎾 I can fetch bugs AND cyber threats!",
-    "Bark bark! 🐕‍🦺 Fun fact: I'm ADORABLE AND SMART!",
+    "Digital security skills are valuable for your entire future.",
+    "The skills you learn here apply everywhere online.",
+    "You're becoming more aware of digital threats. That matters.",
+    "Knowledge is your best defense against cyber attacks.",
+    "You're already thinking like a security professional.",
   ],
   encouragement: [
-    "Woof! 🌟 You're doing GREAT! Keep going!",
-    "Bark bark! 💪 One more and you'll be a master!",
-    "Ruff! 🏆 You're learning SO FAST!",
-    "Woof woof! 🎓 I'm so proud of you!",
+    "You're making real progress. 💪",
+    "This is challenging material—and you're handling it well.",
+    "One more module and you'll be complete!",
+    "Your dedication to learning is impressive.",
+    "You're building skills that will last a lifetime.",
   ],
 };
 
@@ -164,13 +169,13 @@ function checkAnswer(element, isCorrect, category = null) {
       playSound('correct');
       showRandomResponse('correct');
       if (feedbackDiv) {
-        feedbackDiv.innerHTML = '<div class="feedback feedback-correct">✅ YES! You got it right! PAWSOME job!</div>';
+        feedbackDiv.innerHTML = '<div class="feedback feedback-correct">✅ That\'s correct!</div>';
       }
     } else {
       playSound('incorrect');
       showRandomResponse('incorrect');
       if (feedbackDiv) {
-        feedbackDiv.innerHTML = '<div class="feedback feedback-incorrect">❌ Oops! Try again or review the section!</div>';
+        feedbackDiv.innerHTML = '<div class="feedback feedback-incorrect">❌ That\'s not right. Try again!</div>';
       }
     }
     
