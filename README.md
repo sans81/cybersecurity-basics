@@ -69,37 +69,6 @@ This is an **open-source, interactive educational website** designed to teach ki
 The curriculum is deployed and ready to learn! Visit:
 **[https://sans81.github.io/cybersecurity-basics](https://sans81.github.io/cybersecurity-basics)**
 
-### 💻 Local Development
-```bash
-# Clone the repository
-git clone https://github.com/sans81/cybersecurity-basics.git
-cd cybersecurity-basics
-
-# Open in your browser
-open index.html  # macOS
-start index.html # Windows
-# Or simply double-click index.html
-```
-
----
-
-## 📖 File Structure
-
-```
-cybersecurity-basics/
-├── index.html          # Home page with module selector
-├── module1.html        # Module 1: What is Cybersecurity?
-├── module2.html        # Module 2: The Cyber Story (coming soon)
-├── module3.html        # Module 3: Passwords & 2FA (coming soon)
-├── module4.html        # Module 4: Phishing Detective (coming soon)
-├── module5.html        # Module 5: Updates & Protection (coming soon)
-├── module6.html        # Module 6: Final Challenge (coming soon)
-├── styles.css          # Shared responsive styles
-├── mascot.js           # Darbz personality & sound effects
-├── README.md           # This file
-└── assets/             # Images and educational graphics (coming soon)
-```
-
 ---
 
 ## 🐕 About Darbz
