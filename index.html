@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Cybersecurity Basics 101 - Learn the fundamentals of cybersecurity">
+  <title>Cybersecurity Basics 101</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f0f1e 0%, #1a1a2e 50%, #16213e 100%);
+      color: #e0e0e0;
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(90deg, #00d4ff 0%, #0099ff 50%, #6c5ce7 100%);
+      background-size: 400% 400%;
+      animation: gradientShift 8s ease infinite;
+      padding: 40px 20px;
+      text-align: center;
+      box-shadow: 0 10px 40px rgba(0, 212, 255, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    h1 {
+      font-size: clamp(28px, 6vw, 48px);
+      font-weight: 900;
+      color: #fff;
+      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      position: relative;
+      z-index: 1;
+      margin-bottom: 10px;
+    }
+
+    .tagline {
+      font-size: 18px;
+      color: rgba(255,255,255,0.9);
+      position: relative;
+      z-index: 1;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 40px 20px;
+      flex: 1;
+    }
+
+    section {
+      background: rgba(30, 30, 50, 0.8);
+      border: 1px solid #00d4ff;
+      border-radius: 12px;
+      padding: 40px;
+      margin-bottom: 30px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 212, 255, 0.1);
+      animation: slideIn 0.8s ease-out;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      font-size: 32px;
+      color: #00d4ff;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h3 {
+      font-size: 20px;
+      color: #6c5ce7;
+      margin-top: 20px;
+      margin-bottom: 12px;
+    }
+
+    p {
+      line-height: 1.8;
+      font-size: 16px;
+      color: #c0c0c0;
+      margin-bottom: 12px;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      background: rgba(108, 92, 231, 0.1);
+      border-left: 4px solid #6c5ce7;
+      border-radius: 8px;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .timeline-item:hover {
+      background: rgba(108, 92, 231, 0.2);
+      transform: translateX(10px);
+      box-shadow: 0 8px 20px rgba(108, 92, 231, 0.2);
+    }
+
+    .timeline-year {
+      font-weight: 900;
+      font-size: 24px;
+      color: #00d4ff;
+      min-width: 80px;
+    }
+
+    .timeline-content h4 {
+      color: #00d4ff;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+
+    .timeline-content p {
+      margin: 0;
+      font-size: 14px;
+      color: #b0b0b0;
+    }
+
+    .basics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .basic-card {
+      background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(108, 92, 231, 0.1) 100%);
+      border: 1px solid rgba(0, 212, 255, 0.3);
+      border-radius: 12px;
+      padding: 25px;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .basic-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+      transition: left 0.5s;
+    }
+
+    .basic-card:hover {
+      background: linear-gradient(135deg, rgba(0, 212, 255, 0.2) 0%, rgba(108, 92, 231, 0.2) 100%);
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0, 212, 255, 0.2);
+      border-color: rgba(0, 212, 255, 0.6);
+    }
+
+    .basic-card:hover::before {
+      left: 100%;
+    }
+
+    .basic-icon {
+      font-size: 40px;
+      margin-bottom: 12px;
+    }
+
+    .basic-card h4 {
+      color: #00d4ff;
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    .basic-card p {
+      font-size: 14px;
+      color: #a0a0a0;
+      margin: 0;
+    }
+
+    .interactive-quiz {
+      background: linear-gradient(135deg, rgba(0, 212, 255, 0.05) 0%, rgba(108, 92, 231, 0.05) 100%);
+      border: 2px solid #00d4ff;
+      border-radius: 12px;
+      padding: 30px;
+      margin-top: 30px;
+    }
+
+    .quiz-question {
+      margin-bottom: 20px;
+    }
+
+    .quiz-question p {
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .quiz-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .quiz-option {
+      padding: 12px;
+      background: rgba(108, 92, 231, 0.2);
+      border: 2px solid transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: #c0c0c0;
+      font-weight: 500;
+    }
+
+    .quiz-option:hover {
+      background: rgba(108, 92, 231, 0.4);
+      border-color: #6c5ce7;
+    }
+
+    .quiz-option.selected {
+      border-color: #00d4ff;
+      background: rgba(0, 212, 255, 0.3);
+      color: #00d4ff;
+    }
+
+    .quiz-option.correct {
+      border-color: #00ff00;
+      background: rgba(0, 255, 0, 0.2);
+      color: #00ff00;
+    }
+
+    .quiz-option.incorrect {
+      border-color: #ff0000;
+      background: rgba(255, 0, 0, 0.2);
+      color: #ff0000;
+    }
+
+    .quiz-feedback {
+      margin-top: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+
+    .feedback-correct {
+      background: rgba(0, 255, 0, 0.1);
+      color: #00ff00;
+      border: 1px solid #00ff00;
+    }
+
+    .feedback-incorrect {
+      background: rgba(255, 0, 0, 0.1);
+      color: #ff0000;
+      border: 1px solid #ff0000;
+    }
+
+    footer {
+      background: #0a0a15;
+      border-top: 1px solid #00d4ff;
+      padding: 30px 20px;
+      text-align: center;
+      color: #888;
+      font-size: 14px;
+      margin-top: auto;
+    }
+
+    footer p {
+      color: #888;
+      margin: 5px 0;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        padding: 25px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+
+      .container {
+        padding: 20px 15px;
+      }
+
+      .quiz-options {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: 30px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🔒 Cybersecurity Basics 101</h1>
+    <p class="tagline">Learn the fundamentals of digital security</p>
+  </header>
+
+  <div class="container">
+    <section>
+      <h2>🌍 What is Cybersecurity?</h2>
+      <p>
+        Cybersecurity is the practice of protecting systems, networks, and information from digital attacks. These attacks 
+        are usually aimed at accessing, changing, or destroying sensitive information, extorting money from users, or interrupting 
+        normal business processes.
+      </p>
+      <h3>Why Does It Matter?</h3>
+      <p>
+        In our connected world, nearly every organization is at risk. Data breaches cost businesses an average of 
+        <strong>$4.5 million</strong> per incident. Cybersecurity protects your personal information, finances, and digital identity.
+      </p>
+    </section>
+
+    <section>
+      <h2>📚 History of Cybersecurity</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">1960s</div>
+          <div class="timeline-content">
+            <h4>The Beginning</h4>
+            <p>Early computer systems introduced new security concerns. Bell Labs developed the first password system for UNIX.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">1972</div>
+          <div class="timeline-content">
+            <h4>First Computer Worm</h4>
+            <p>The Creeper worm emerges as one of the first self-replicating programs, marking the birth of malware.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">1988</div>
+          <div class="timeline-content">
+            <h4>Morris Worm</h4>
+            <p>The Morris Worm infects thousands of computers on the early internet, causing $100M in damages. First major cyber crisis.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2000</div>
+          <div class="timeline-content">
+            <h4>Rise of DDoS Attacks</h4>
+            <p>Major DDoS attacks hit Yahoo, eBay, and Amazon, highlighting internet vulnerabilities.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2011</div>
+          <div class="timeline-content">
+            <h4>Data Breaches Accelerate</h4>
+            <p>Sony Pictures, Playstation Network breached, affecting millions. Ransomware emerges as a major threat.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2017</div>
+          <div class="timeline-content">
+            <h4>WannaCry Ransomware</h4>
+            <p>Global ransomware attack affects 200,000+ computers across 150 countries, causing billions in damage.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2024</div>
+          <div class="timeline-content">
+            <h4>AI & Modern Threats</h4>
+            <p>AI-powered attacks, supply chain risks, and zero-day exploits dominate the cybersecurity landscape.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🛡️ Cybersecurity Basics</h2>
+      <p>These are the fundamental concepts every person should understand:</p>
+      
+      <div class="basics-grid">
+        <div class="basic-card">
+          <div class="basic-icon">🔐</div>
+          <h4>Passwords</h4>
+          <p>Strong passwords are your first line of defense. Use 12+ characters with mixed case, numbers, and symbols.</p>
+        </div>
+
+        <div class="basic-card">
+          <div class="basic-icon">📱</div>
+          <h4>Two-Factor Authentication (2FA)</h4>
+          <p>Adds an extra layer of security by requiring a second verification method beyond your password.</p>
+        </div>
+
+        <div class="basic-card">
+          <div class="basic-icon">🚨</div>
+          <h4>Phishing Awareness</h4>
+          <p>Learn to identify fake emails and messages that try to steal your personal information.</p>
+        </div>
+
+        <div class="basic-card">
+          <div class="basic-icon">🔄</div>
+          <h4>Updates & Patches</h4>
+          <p>Keep your software updated. Patches fix known vulnerabilities that attackers exploit.</p>
+        </div>
+
+        <div class="basic-card">
+          <div class="basic-icon">🌐</div>
+          <h4>VPN & Encryption</h4>
+          <p>Encrypt your data and hide your IP address. Always use HTTPS and consider a VPN on public WiFi.</p>
+        </div>
+
+        <div class="basic-card">
+          <div class="basic-icon">🎓</div>
+          <h4>Education</h4>
+          <p>Stay informed about security best practices. The human element is often the weakest link.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>🧠 Test Your Knowledge</h2>
+      <p>Let's see what you've learned! Answer these interactive questions:</p>
+
+      <div class="interactive-quiz">
+        <div class="quiz-question">
+          <p>❓ Question 1: What is the most common cybersecurity threat?</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="checkAnswer(this, false)">Nuclear War</div>
+            <div class="quiz-option" onclick="checkAnswer(this, true)">Phishing & Social Engineering</div>
+            <div class="quiz-option" onclick="checkAnswer(this, false)">Aliens</div>
+            <div class="quiz-option" onclick="checkAnswer(this, false)">Cosmic Rays</div>
+          </div>
+          <div id="feedback1"></div>
+        </div>
+      </div>
+
+      <div class="interactive-quiz" style="margin-top: 20px;">
+        <div class="quiz-question">
+          <p>❓ Question 2: How many characters should a strong password have?</p>
+          <div class="quiz-options">
+            <div class="quiz-option" onclick="checkAnswer(this, false)">4-6 characters</div>
+            <div class="quiz-option" onclick="checkAnswer(this, false)">6-8 characters</div>
+            <div class="quiz-option" onclick="checkAnswer(this, true)">12+ characters</div>
+            <div class="quiz-option" onclick="checkAnswer(this, false)">Any length works</div>
+          </div>
+          <div id="feedback2"></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>💡 Key Takeaways</h2>
+      <h3>Remember These 5 Rules:</h3>
+      <p><strong>1. Use Strong, Unique Passwords</strong> - Different passwords for different accounts, 12+ characters.</p>
+      <p><strong>2. Enable 2FA</strong> - Add two-factor authentication wherever available.</p>
+      <p><strong>3. Be Skeptical of Links</strong> - Don't click on suspicious emails or messages.</p>
+      <p><strong>4. Keep Software Updated</strong> - Enable automatic updates for your OS and applications.</p>
+      <p><strong>5. Regular Backups</strong> - Back up important data offline to protect against ransomware.</p>
+    </section>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Cybersecurity Basics 101. Educational Content.</p>
+    <p>This is a learning resource. Always consult professionals for serious security concerns.</p>
+  </footer>
+
+  <script>
+    function checkAnswer(element, isCorrect) {
+      const parent = element.parentElement;
+      const feedbackDiv = element.parentElement.parentElement.querySelector('[id^="feedback"]');
+      
+      // Reset all options
+      parent.querySelectorAll('.quiz-option').forEach(opt => {
+        opt.classList.remove('selected', 'correct', 'incorrect');
+      });
+      
+      // Mark selected
+      element.classList.add('selected');
+      
+      // Check answer after 300ms for effect
+      setTimeout(() => {
+        if (isCorrect) {
+          element.classList.add('correct');
+          feedbackDiv.innerHTML = '<div class="quiz-feedback feedback-correct">✅ Correct! Great job!</div>';
+        } else {
+          element.classList.add('incorrect');
+          feedbackDiv.innerHTML = '<div class="quiz-feedback feedback-incorrect">❌ Not quite. Try again or check the basics section above.</div>';
+        }
+      }, 300);
+    }
+  </script>
+</body>
+</html>
