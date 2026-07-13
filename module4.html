@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 4: Phishing Detective - Cybersecurity Basics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="animated-header">
+        <nav class="nav-breadcrumb">
+            <a href="index.html">🏠 Home</a> / <span>Module 4: Phishing Detective</span>
+        </nav>
+        <h1>🚨 Phishing Detective</h1>
+        <p class="subtitle">Learn to spot FAKE emails and catch phishing scams! 🎣</p>
+    </header>
+
+    <main class="module-container">
+        <!-- Intro -->
+        <section class="intro-section">
+            <h2>What is Phishing?</h2>
+            <p>Phishing is when hackers send FAKE emails pretending to be a real company to trick you! 🎣</p>
+            <p>They want to steal your password, money, or personal information!</p>
+        </section>
+
+        <!-- Phishing Game -->
+        <section class="game-section">
+            <h2>🎮 Phishing Email Detector Game</h2>
+            <p>Read each email carefully! Is it REAL or FAKE (phishing)? Click your answer!</p>
+            
+            <div id="phishing-game" class="phishing-container">
+                <!-- Emails will be inserted here by JavaScript -->
+            </div>
+            
+            <div id="game-score" class="game-score hidden">
+                <h3>🎉 Game Complete!</h3>
+                <p id="score-text"></p>
+                <button onclick="resetPhishingGame()" class="reset-button">Try Again</button>
+            </div>
+        </section>
+
+        <!-- Red Flags Section -->
+        <section class="info-section">
+            <h2>🚩 Red Flags of Phishing Emails</h2>
+            <p>Look for these WARNING SIGNS:</p>
+            
+            <div class="card-grid">
+                <div class="red-flag-card">
+                    <h3>🔴 Urgent Requests</h3>
+                    <p>"Click NOW!" or "Your account will close in 5 minutes!"</p>
+                    <p>Real companies don't rush you!</p>
+                </div>
+                
+                <div class="red-flag-card">
+                    <h3>🔴 Asking for Passwords</h3>
+                    <p>"Please enter your password here"</p>
+                    <p>Real companies NEVER ask for passwords by email!</p>
+                </div>
+                
+                <div class="red-flag-card">
+                    <h3>🔴 Suspicious Links</h3>
+                    <p>Email says "from bank.com" but link is "bnak.com"</p>
+                    <p>Check the link carefully!</p>
+                </div>
+                
+                <div class="red-flag-card">
+                    <h3>🔴 Strange Sender</h3>
+                    <p>"support@randommail.com" instead of official email</p>
+                    <p>Check who really sent it!</p>
+                </div>
+                
+                <div class="red-flag-card">
+                    <h3>🔴 Poor Grammar</h3>
+                    <p>"Please to update your accound imediately"</p>
+                    <p>Real companies have good writers!</p>
+                </div>
+                
+                <div class="red-flag-card">
+                    <h3>🔴 Suspicious Attachments</h3>
+                    <p>Files from unknown senders</p>
+                    <p>They might have viruses!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Good Practices -->
+        <section class="warning-section">
+            <h2>✅ How to Stay Safe</h2>
+            <div class="card-grid">
+                <div class="good-practice-card">
+                    <h3>✅ Good Habits</h3>
+                    <p>✅ Check the sender email address carefully</p>
+                    <p>✅ Hover over links before clicking</p>
+                    <p>✅ Never give passwords by email</p>
+                    <p>✅ When in doubt, ASK AN ADULT!</p>
+                </div>
+                
+                <div class="good-practice-card">
+                    <h3>✅ If You See Phishing</h3>
+                    <p>✅ Don't click any links</p>
+                    <p>✅ Don't download attachments</p>
+                    <p>✅ Report it to the website</p>
+                    <p>✅ Tell a trusted adult</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz -->
+        <section class="quiz-section">
+            <h2>🧠 Test Your Phishing Detection!</h2>
+            
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    <p><strong>Question 1:</strong> Which is a RED FLAG for phishing?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'phishing')">The email is from your bank</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, true, 'phishing')">The email asks you to click NOW or your account closes!</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'phishing')">The email has your real name</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'phishing')">The email is politely written</div>
+                    </div>
+                    <div id="q1-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 2:</strong> What should you NEVER do in an email?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'phishing')">Reply to spam</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'phishing')">Check who sent it</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, true, 'phishing')">Enter your password</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'phishing')">Ask for the sender's contact info</div>
+                    </div>
+                    <div id="q2-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 3:</strong> When should you click a link in an email?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'phishing')">Always - that's what emails are for</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, true, 'phishing')">Only after checking the sender and hovering over the link</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'phishing')">Never ever click links</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'phishing')">Only if the email is fancy-looking</div>
+                    </div>
+                    <div id="q3-feedback"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <section class="module-nav">
+            <a href="module3.html" class="nav-button prev">← Module 3: Passwords & 2FA</a>
+            <a href="module5.html" class="nav-button next">Module 5: Updates & Protection →</a>
+        </section>
+    </main>
+
+    <!-- Darbz Mascot -->
+    <div id="darbz-container" class="darbz-container">
+        <div class="darbz-mascot" onclick="toggleDarbzSpeech()">
+            🐕
+        </div>
+        <div id="darbz-speech" class="darbz-speech hidden">
+            <p id="darbz-message">Click me to hear from Darbz!</p>
+            <div class="speech-pointer"></div>
+        </div>
+    </div>
+
+    <script src="mascot.js"></script>
+    <script>
+        const phishingEmails = [
+            {
+                sender: "support@amazon.com",
+                subject: "Your package has arrived!",
+                body: "Dear Customer, Your Amazon package has been delivered. Thank you for shopping with us!",
+                isPhishing: false,
+                reason: "Real email from official Amazon address with normal greeting"
+            },
+            {
+                sender: "noreply@paypa-secure.com",
+                subject: "⚠️ URGENT: Verify Your Account NOW!",
+                body: "Your PayPal account will be CLOSED in 1 hour! Click here NOW to confirm your password: [CLICK HERE]",
+                isPhishing: true,
+                reason: "Red flags: Fake domain (paypa-secure), urgent pressure, asks for password"
+            },
+            {
+                sender: "hello@netflix.com",
+                subject: "Ready to watch?",
+                body: "Hi! Your Netflix subscription is active. Enjoy watching!",
+                isPhishing: false,
+                reason: "Real sender, normal message, no urgent requests"
+            },
+            {
+                sender: "banking.alerts@update-bank-now.ru",
+                subject: "🚨 URGENT: Update Your Information",
+                body: "Please click here to update your banking details immediately or your account will be suspended!",
+                isPhishing: true,
+                reason: "Suspicious domain, urgent language, requests sensitive info"
+            },
+            {
+                sender: "noreply@youtube.com",
+                subject: "New features on YouTube!",
+                body: "Check out the new features we added to your account. Visit YouTube to learn more!",
+                isPhishing: false,
+                reason: "Official sender, informational, no password requests"
+            },
+            {
+                sender: "winner@lottery-millions.com",
+                subject: "CONGRATULATIONS! YOU WON $1,000,000!!!",
+                body: "You have been selected as a lucky winner! Click to claim your prize and enter your bank details to receive the money!",
+                isPhishing: true,
+                reason: "Too good to be true, asks for bank details, suspicious sender"
+            }
+        ];
+
+        let currentEmailIndex = 0;
+        let correctAnswers = 0;
+
+        function displayEmail() {
+            if (currentEmailIndex >= phishingEmails.length) {
+                showGameScore();
+                return;
+            }
+
+            const email = phishingEmails[currentEmailIndex];
+            const gameContainer = document.getElementById('phishing-game');
+            
+            gameContainer.innerHTML = `
+                <div class="email-card">
+                    <div class="email-header">
+                        <div><strong>From:</strong> ${email.sender}</div>
+                        <div><strong>Subject:</strong> ${email.subject}</div>
+                    </div>
+                    <div class="email-body">${email.body}</div>
+                    <div class="email-buttons">
+                        <button onclick="answerPhishing(${currentEmailIndex}, true)" class="btn-real">✅ REAL Email</button>
+                        <button onclick="answerPhishing(${currentEmailIndex}, false)" class="btn-phishing">🚨 PHISHING</button>
+                    </div>
+                    <div class="email-progress">Email ${currentEmailIndex + 1} of ${phishingEmails.length}</div>
+                </div>
+            `;
+        }
+
+        function answerPhishing(index, userSaysPhishing) {
+            const email = phishingEmails[index];
+            const isCorrect = userSaysPhishing === email.isPhishing;
+            
+            if (isCorrect) {
+                correctAnswers++;
+                playSound('correct');
+                showRandomResponse('phishing');
+            } else {
+                playSound('incorrect');
+                showRandomResponse('encouragement');
+            }
+
+            setTimeout(() => {
+                currentEmailIndex++;
+                displayEmail();
+            }, 1500);
+        }
+
+        function showGameScore() {
+            const scoreDiv = document.getElementById('game-score');
+            const scoreText = document.getElementById('score-text');
+            const percentage = (correctAnswers / phishingEmails.length) * 100;
+            
+            scoreText.textContent = `You got ${correctAnswers} out of ${phishingEmails.length} correct! (${percentage.toFixed(0)}%)`;
+            scoreDiv.classList.remove('hidden');
+            document.getElementById('phishing-game').innerHTML = '';
+            
+            playSound('correct');
+            showRandomResponse('random');
+        }
+
+        function resetPhishingGame() {
+            currentEmailIndex = 0;
+            correctAnswers = 0;
+            document.getElementById('game-score').classList.add('hidden');
+            displayEmail();
+        }
+
+        function checkAnswer(element, isCorrect, category) {
+            element.classList.add(isCorrect ? 'correct' : 'incorrect');
+            
+            const question = element.closest('.quiz-question');
+            const feedbackDiv = question.querySelector('[id$="-feedback"]');
+            
+            if (isCorrect) {
+                feedbackDiv.innerHTML = '<div class="feedback-message correct-feedback">✅ Correct! Great job!</div>';
+                playSound('correct');
+                showRandomResponse(category);
+            } else {
+                feedbackDiv.innerHTML = '<div class="feedback-message incorrect-feedback">❌ Try again! You\'ve got this!</div>';
+                playSound('incorrect');
+                showRandomResponse('encouragement');
+            }
+            
+            question.querySelectorAll('.quiz-option').forEach(opt => {
+                opt.style.pointerEvents = 'none';
+                opt.style.opacity = '0.6';
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initDabzr();
+            displayEmail();
+            showRandomResponse('welcome');
+        });
+
+        function toggleDarbzSpeech() {
+            const speech = document.getElementById('darbz-speech');
+            speech.classList.toggle('hidden');
+            playSound('bark');
+            showRandomResponse('random');
+        }
+    </script>
+</body>
+</html>

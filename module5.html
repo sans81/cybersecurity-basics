@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 5: Updates & Protection - Cybersecurity Basics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="animated-header">
+        <nav class="nav-breadcrumb">
+            <a href="index.html">🏠 Home</a> / <span>Module 5: Updates & Protection</span>
+        </nav>
+        <h1>⚡ Updates & Protection</h1>
+        <p class="subtitle">Learn why software updates are SUPER important for security! 🛡️</p>
+    </header>
+
+    <main class="module-container">
+        <!-- Intro -->
+        <section class="intro-section">
+            <h2>What are Software Updates?</h2>
+            <p>Updates are like giving your device a POWER-UP! 💪 They fix problems and patch security holes that hackers can use!</p>
+        </section>
+
+        <!-- Update Race Game -->
+        <section class="game-section">
+            <h2>🎮 The Update Race Game</h2>
+            <p>Your device has discovered SECURITY HOLES! Click the update buttons in the correct order to protect yourself! ⏱️</p>
+            
+            <div class="update-race-container">
+                <div id="race-status" class="race-status">
+                    <p>Click updates in the correct order!</p>
+                </div>
+                
+                <div id="update-buttons-container" class="update-buttons-container">
+                    <!-- Buttons will be shuffled by JavaScript -->
+                </div>
+                
+                <div id="race-result" class="race-result hidden">
+                    <h3 id="result-title"></h3>
+                    <p id="result-text"></p>
+                    <button onclick="resetRaceGame()" class="reset-button">Try Again</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Updates Matter -->
+        <section class="info-section">
+            <h2>🔧 Why Updates Are Important</h2>
+            
+            <div class="card-grid">
+                <div class="info-card pink-border">
+                    <h3>🐛 Fix Bugs</h3>
+                    <p>Bugs are mistakes in software. Updates fix them!</p>
+                    <p>Example: Apps crashing, weird errors</p>
+                </div>
+                
+                <div class="info-card yellow-border">
+                    <h3>🔐 Security Patches</h3>
+                    <p>Hackers find holes in software. Updates fill those holes!</p>
+                    <p>Without patches = hackers can break in!</p>
+                </div>
+                
+                <div class="info-card cyan-border">
+                    <h3>⚡ Better Performance</h3>
+                    <p>Updates make your device faster and better!</p>
+                    <p>Everything runs smoother 🏃</p>
+                </div>
+                
+                <div class="info-card green-border">
+                    <h3>🆕 New Features</h3>
+                    <p>Cool new things get added!</p>
+                    <p>Your device gets even better 🎉</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Real World Examples -->
+        <section class="warning-section">
+            <h2>📱 Types of Software That Need Updates</h2>
+            
+            <div class="card-grid">
+                <div class="software-card">
+                    <h3>📱 Mobile Apps</h3>
+                    <p>Instagram, TikTok, Games, YouTube</p>
+                    <p>Update to stay safe and get new features!</p>
+                </div>
+                
+                <div class="software-card">
+                    <h3>💻 Operating Systems</h3>
+                    <p>Windows, Mac, Android, iOS</p>
+                    <p>CRITICAL for security! Update immediately!</p>
+                </div>
+                
+                <div class="software-card">
+                    <h3>🔍 Web Browsers</h3>
+                    <p>Chrome, Firefox, Safari, Edge</p>
+                    <p>Hackers often target browsers first!</p>
+                </div>
+                
+                <div class="software-card">
+                    <h3>🔐 Password Managers</h3>
+                    <p>Keep passwords safe</p>
+                    <p>Always update these immediately!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- How to Stay Protected -->
+        <section class="info-section">
+            <h2>✅ How to Stay Protected</h2>
+            
+            <div class="protection-steps">
+                <div class="step-card">
+                    <div class="step-number">1️⃣</div>
+                    <h3>Enable Auto-Updates</h3>
+                    <p>Let your device update automatically!</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2️⃣</div>
+                    <h3>Update When Prompted</h3>
+                    <p>When you see "Update Available", click it!</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3️⃣</div>
+                    <h3>Restart After Updates</h3>
+                    <p>Let your device restart - it's important!</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4️⃣</div>
+                    <h3>Don't Ignore Updates</h3>
+                    <p>Delaying updates = security risk! ⚠️</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz -->
+        <section class="quiz-section">
+            <h2>🧠 Test Your Update Knowledge!</h2>
+            
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    <p><strong>Question 1:</strong> What do security patches do?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'updates')">They make your device slower</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, true, 'updates')">They fix security holes that hackers use</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'updates')">They delete your files</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'updates')">They cost money</div>
+                    </div>
+                    <div id="q1-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 2:</strong> What should you do when you see "Update Available"?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'updates')">Ignore it forever</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'updates')">Wait a few years</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, true, 'updates')">Install the update as soon as possible</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'updates')">Ask your friends if they've updated yet</div>
+                    </div>
+                    <div id="q2-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 3:</strong> Which type of software MOST NEEDS security updates?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'updates')">Calculator apps</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'updates')">Note-taking apps</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, true, 'updates')">Operating systems and web browsers</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'updates')">Flashlight apps</div>
+                    </div>
+                    <div id="q3-feedback"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <section class="module-nav">
+            <a href="module4.html" class="nav-button prev">← Module 4: Phishing Detective</a>
+            <a href="module6.html" class="nav-button next">Module 6: Final Challenge →</a>
+        </section>
+    </main>
+
+    <!-- Darbz Mascot -->
+    <div id="darbz-container" class="darbz-container">
+        <div class="darbz-mascot" onclick="toggleDarbzSpeech()">
+            🐕
+        </div>
+        <div id="darbz-speech" class="darbz-speech hidden">
+            <p id="darbz-message">Click me to hear from Darbz!</p>
+            <div class="speech-pointer"></div>
+        </div>
+    </div>
+
+    <script src="mascot.js"></script>
+    <script>
+        const updates = [
+            { name: 'Windows Security Update', order: 1 },
+            { name: 'Chrome Browser Patch', order: 2 },
+            { name: 'Instagram Security Fix', order: 3 },
+            { name: 'iOS Device Update', order: 4 }
+        ];
+
+        let currentOrder = 0;
+        let shuffled = [...updates].sort(() => Math.random() - 0.5);
+
+        function initRaceGame() {
+            const container = document.getElementById('update-buttons-container');
+            container.innerHTML = '';
+            shuffled.forEach((update, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'update-button';
+                btn.textContent = update.name;
+                btn.onclick = () => clickUpdate(index);
+                container.appendChild(btn);
+            });
+        }
+
+        function clickUpdate(index) {
+            const update = shuffled[index];
+            
+            if (update.order === currentOrder + 1) {
+                // Correct!
+                playSound('correct');
+                currentOrder++;
+                
+                const btn = document.querySelectorAll('.update-button')[index];
+                btn.style.opacity = '0.5';
+                btn.disabled = true;
+                
+                const status = document.getElementById('race-status');
+                status.textContent = `✅ Correct! ${update.name} installed!`;
+                
+                if (currentOrder === updates.length) {
+                    // Game complete
+                    setTimeout(completeRace, 1000);
+                }
+            } else {
+                // Incorrect
+                playSound('incorrect');
+                const status = document.getElementById('race-status');
+                status.textContent = `❌ Wrong order! The correct next update is: ${updates[currentOrder].name}`;
+                showRandomResponse('encouragement');
+            }
+        }
+
+        function completeRace() {
+            const result = document.getElementById('race-result');
+            result.querySelector('#result-title').textContent = '🎉 All Updates Installed!';
+            result.querySelector('#result-text').textContent = 'Your device is now protected! Great job following the updates in the correct order!';
+            result.classList.remove('hidden');
+            playSound('correct');
+            showRandomResponse('random');
+        }
+
+        function resetRaceGame() {
+            currentOrder = 0;
+            shuffled = [...updates].sort(() => Math.random() - 0.5);
+            document.getElementById('race-result').classList.add('hidden');
+            document.getElementById('race-status').textContent = 'Click updates in the correct order!';
+            initRaceGame();
+        }
+
+        function checkAnswer(element, isCorrect, category) {
+            element.classList.add(isCorrect ? 'correct' : 'incorrect');
+            
+            const question = element.closest('.quiz-question');
+            const feedbackDiv = question.querySelector('[id$="-feedback"]');
+            
+            if (isCorrect) {
+                feedbackDiv.innerHTML = '<div class="feedback-message correct-feedback">✅ Correct! Great job!</div>';
+                playSound('correct');
+                showRandomResponse(category);
+            } else {
+                feedbackDiv.innerHTML = '<div class="feedback-message incorrect-feedback">❌ Try again! You\'ve got this!</div>';
+                playSound('incorrect');
+                showRandomResponse('encouragement');
+            }
+            
+            question.querySelectorAll('.quiz-option').forEach(opt => {
+                opt.style.pointerEvents = 'none';
+                opt.style.opacity = '0.6';
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initDabzr();
+            initRaceGame();
+            showRandomResponse('welcome');
+        });
+
+        function toggleDarbzSpeech() {
+            const speech = document.getElementById('darbz-speech');
+            speech.classList.toggle('hidden');
+            playSound('bark');
+            showRandomResponse('random');
+        }
+    </script>
+</body>
+</html>

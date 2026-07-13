@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 3: Passwords & 2FA - Cybersecurity Basics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="animated-header">
+        <nav class="nav-breadcrumb">
+            <a href="index.html">🏠 Home</a> / <span>Module 3: Passwords & 2FA</span>
+        </nav>
+        <h1>🔐 Passwords & 2FA</h1>
+        <p class="subtitle">Learn to create SUPER STRONG passwords and add extra protection! 🛡️</p>
+    </header>
+
+    <main class="module-container">
+        <!-- Intro Section -->
+        <section class="intro-section">
+            <h2>Why Passwords Matter</h2>
+            <p>Your password is like the key to your house! 🗝️ A strong password keeps hackers out. A weak password? It's like leaving your door wide open!</p>
+        </section>
+
+        <!-- Password Strength Checker Game -->
+        <section class="game-section">
+            <h2>🎮 Password Strength Checker Game</h2>
+            <p>Type in your own password and see how STRONG it is! Try making it better!</p>
+            
+            <div class="password-checker">
+                <input type="text" id="passwordInput" placeholder="Type a password here..." class="password-input">
+                
+                <div class="strength-meter">
+                    <div id="strengthBar" class="strength-bar"></div>
+                </div>
+                
+                <div id="strengthText" class="strength-text">Type a password to check strength...</div>
+                
+                <div class="password-tips">
+                    <h4>💡 Make Passwords STRONGER with these tips:</h4>
+                    <div class="tips-checklist">
+                        <div class="tip" id="tip-length">
+                            <span class="tip-icon">❌</span> <span class="tip-text">At least 8 characters long</span>
+                        </div>
+                        <div class="tip" id="tip-uppercase">
+                            <span class="tip-icon">❌</span> <span class="tip-text">At least one UPPERCASE letter (A-Z)</span>
+                        </div>
+                        <div class="tip" id="tip-lowercase">
+                            <span class="tip-icon">❌</span> <span class="tip-text">At least one lowercase letter (a-z)</span>
+                        </div>
+                        <div class="tip" id="tip-number">
+                            <span class="tip-icon">❌</span> <span class="tip-text">At least one number (0-9)</span>
+                        </div>
+                        <div class="tip" id="tip-special">
+                            <span class="tip-icon">❌</span> <span class="tip-text">At least one special character (!@#$%)</span>
+                        </div>
+                        <div class="tip" id="tip-noword">
+                            <span class="tip-icon">❌</span> <span class="tip-text">NOT a real word or name</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2FA Section -->
+        <section class="info-section">
+            <h2>🔐 Two-Factor Authentication (2FA)</h2>
+            <p>2FA is like having TWO locks on your door instead of one! 🔐🔐</p>
+            
+            <div class="card-grid">
+                <div class="info-card pink-border">
+                    <h3>What is 2FA?</h3>
+                    <p>It's TWO ways to prove you're really YOU:</p>
+                    <p style="font-weight: bold; color: #ff6b9d;">1️⃣ Something you KNOW (your password)<br>2️⃣ Something you HAVE (your phone)</p>
+                </div>
+                
+                <div class="info-card yellow-border">
+                    <h3>How Does 2FA Work?</h3>
+                    <p>1. You type your password ✅</p>
+                    <p>2. An app or text sends a SECRET CODE 📱</p>
+                    <p>3. You type the code to get in ✅</p>
+                    <p>Hackers need BOTH to break in!</p>
+                </div>
+                
+                <div class="info-card cyan-border">
+                    <h3>Why Use 2FA?</h3>
+                    <p>Even if a hacker gets your password, they can't log in! They don't have your phone! 📵</p>
+                    <p style="color: #48dbfb; font-weight: bold;">It's like needing BOTH a key AND a secret code!</p>
+                </div>
+                
+                <div class="info-card green-border">
+                    <h3>Where to Use 2FA</h3>
+                    <p>🏦 Your bank account<br>📧 Your email<br>🎮 Gaming accounts<br>📱 Social media<br>🤖 Everywhere important!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Password Don'ts -->
+        <section class="warning-section">
+            <h2>⚠️ Password DON'Ts (Weak Passwords)</h2>
+            <div class="card-grid">
+                <div class="bad-practice-card">
+                    <h3>❌ DON'T use:</h3>
+                    <p>❌ "123456" or "password"</p>
+                    <p>❌ Your name or birthday</p>
+                    <p>❌ Your pet's name</p>
+                    <p>❌ "abc123"</p>
+                    <p>❌ Patterns on keyboard</p>
+                </div>
+                
+                <div class="good-practice-card">
+                    <h3>✅ DO use:</h3>
+                    <p>✅ Mix UPPERCASE, lowercase, numbers!</p>
+                    <p>✅ Random letters and symbols</p>
+                    <p>✅ At least 12 characters!</p>
+                    <p>✅ Different for each account</p>
+                    <p>✅ A password manager to remember them</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz -->
+        <section class="quiz-section">
+            <h2>🧠 Test Your Password Knowledge!</h2>
+            
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    <p><strong>Question 1:</strong> Which is the STRONGEST password?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'password')">password123</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'password')">MyBirthday1985</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, true, 'password')">K9$mP!xY#7vL2</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'password')">qwerty</div>
+                    </div>
+                    <div id="q1-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 2:</strong> What does 2FA stand for?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, false, '2fa')">2 Fun Activities</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, true, '2fa')">Two-Factor Authentication</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, '2fa')">Two Friends Always</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, '2fa')">Too Fake Attempts</div>
+                    </div>
+                    <div id="q2-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 3:</strong> If a hacker gets your password but you use 2FA, can they log in?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, false, '2fa')">Yes, always</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, true, '2fa')">No, they also need the code from your phone</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, '2fa')">Maybe, it depends</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, '2fa')">Only if it's a strong password</div>
+                    </div>
+                    <div id="q3-feedback"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fun Fact -->
+        <section class="fun-fact-section">
+            <div class="fun-fact-card">
+                <h3>🎓 Fun Cyber Fact!</h3>
+                <p>"Password" comes from "Pass" (to go through) + "Word" (a secret word). Together it means "say this secret word and you can pass through!" 🗣️</p>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <section class="module-nav">
+            <a href="module2.html" class="nav-button prev">← Module 2: The Cyber Story</a>
+            <a href="module4.html" class="nav-button next">Module 4: Phishing Detective →</a>
+        </section>
+    </main>
+
+    <!-- Darbz Mascot -->
+    <div id="darbz-container" class="darbz-container">
+        <div class="darbz-mascot" onclick="toggleDarbzSpeech()">
+            🐕
+        </div>
+        <div id="darbz-speech" class="darbz-speech hidden">
+            <p id="darbz-message">Click me to hear from Darbz!</p>
+            <div class="speech-pointer"></div>
+        </div>
+    </div>
+
+    <script src="mascot.js"></script>
+    <script>
+        const passwordInput = document.getElementById('passwordInput');
+        
+        passwordInput.addEventListener('input', function() {
+            checkPasswordStrength(this.value);
+        });
+
+        function checkPasswordStrength(password) {
+            let strength = 0;
+            const tips = {
+                length: password.length >= 8,
+                uppercase: /[A-Z]/.test(password),
+                lowercase: /[a-z]/.test(password),
+                number: /\d/.test(password),
+                special: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password),
+                noword: !isCommonWord(password)
+            };
+
+            // Update tips display
+            Object.keys(tips).forEach(key => {
+                const tipElement = document.getElementById(`tip-${key}`);
+                if (tips[key]) {
+                    tipElement.classList.add('checked');
+                    tipElement.querySelector('.tip-icon').textContent = '✅';
+                    strength++;
+                } else {
+                    tipElement.classList.remove('checked');
+                    tipElement.querySelector('.tip-icon').textContent = '❌';
+                }
+            });
+
+            // Update strength bar
+            const strengthBar = document.getElementById('strengthBar');
+            const strengthText = document.getElementById('strengthText');
+            const percentage = (strength / 6) * 100;
+            
+            strengthBar.style.width = percentage + '%';
+            
+            if (percentage === 0) {
+                strengthBar.className = 'strength-bar';
+                strengthText.textContent = 'Type a password to check strength...';
+            } else if (percentage < 34) {
+                strengthBar.className = 'strength-bar weak';
+                strengthText.innerHTML = '<span style="color: #ff6348;">🔴 WEAK - Make it stronger!</span>';
+            } else if (percentage < 67) {
+                strengthBar.className = 'strength-bar medium';
+                strengthText.innerHTML = '<span style="color: #ffa502;">🟡 MEDIUM - Getting better!</span>';
+            } else if (percentage < 100) {
+                strengthBar.className = 'strength-bar strong';
+                strengthText.innerHTML = '<span style="color: #43e97b;">🟢 STRONG - Really good!</span>';
+            } else {
+                strengthBar.className = 'strength-bar very-strong';
+                strengthText.innerHTML = '<span style="color: #11d3f3;">🟢 VERY STRONG - PAWSOME! 🐕</span>';
+                playSound('correct');
+            }
+        }
+
+        function isCommonWord(password) {
+            const commonWords = ['password', 'qwerty', 'abc', '123', 'admin', 'user', 'test', 'login'];
+            return commonWords.some(word => password.toLowerCase().includes(word));
+        }
+
+        function checkAnswer(element, isCorrect, category) {
+            element.classList.add(isCorrect ? 'correct' : 'incorrect');
+            
+            const question = element.closest('.quiz-question');
+            const feedbackDiv = question.querySelector('[id$="-feedback"]');
+            
+            if (isCorrect) {
+                feedbackDiv.innerHTML = '<div class="feedback-message correct-feedback">✅ Correct! Great job!</div>';
+                playSound('correct');
+                showRandomResponse(category);
+            } else {
+                feedbackDiv.innerHTML = '<div class="feedback-message incorrect-feedback">❌ Try again! You\'ve got this!</div>';
+                playSound('incorrect');
+                showRandomResponse('encouragement');
+            }
+            
+            question.querySelectorAll('.quiz-option').forEach(opt => {
+                opt.style.pointerEvents = 'none';
+                opt.style.opacity = '0.6';
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initDabzr();
+            showRandomResponse('welcome');
+        });
+
+        function toggleDarbzSpeech() {
+            const speech = document.getElementById('darbz-speech');
+            speech.classList.toggle('hidden');
+            playSound('bark');
+            showRandomResponse('random');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 6: Final Challenge - Cybersecurity Basics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="animated-header">
+        <nav class="nav-breadcrumb">
+            <a href="index.html">🏠 Home</a> / <span>Module 6: Final Challenge</span>
+        </nav>
+        <h1>🏆 The Final Challenge</h1>
+        <p class="subtitle">Test ALL your cybersecurity superpowers! Can you become a Cyber Guardian? 🦸</p>
+    </header>
+
+    <main class="module-container">
+        <!-- Intro -->
+        <section class="intro-section">
+            <h2>🎯 The Ultimate Challenge</h2>
+            <p>You've learned about cybersecurity basics, history, passwords, phishing, and updates!</p>
+            <p>Now it's time for the FINAL CHALLENGE! Answer questions from ALL modules and prove you're a Cyber Guardian! 🦸‍♂️</p>
+            <p style="color: #667eea; font-weight: bold;">Get 8 out of 10 correct to earn your certificate! 🎓</p>
+        </section>
+
+        <!-- Challenge Quiz -->
+        <section class="quiz-section">
+            <h2>🧠 Ultimate Cybersecurity Challenge</h2>
+            
+            <div id="challenge-container" class="challenge-container">
+                <!-- Questions will be displayed here -->
+            </div>
+            
+            <div id="challenge-result" class="challenge-result hidden">
+                <div id="result-content"></div>
+                <button onclick="resetChallenge()" class="reset-button">Try Again</button>
+                <a href="index.html" class="nav-button">← Back to Home</a>
+            </div>
+        </section>
+
+        <!-- Certificate Section -->
+        <section id="certificate-section" class="certificate-section hidden">
+            <div class="certificate">
+                <div class="certificate-header">
+                    🎓 CERTIFICATE OF ACHIEVEMENT 🎓
+                </div>
+                <div class="certificate-body">
+                    <p style="font-size: 24px; color: #667eea; margin-bottom: 10px;">This certifies that</p>
+                    <p id="cert-name" style="font-size: 28px; font-weight: bold; color: #ff6b9d;">Cyber Guardian</p>
+                    <p style="margin-top: 20px;">Has successfully completed the Cybersecurity Basics curriculum</p>
+                    <p style="margin-top: 10px;">and demonstrated mastery of:</p>
+                    <ul style="text-align: left; display: inline-block; margin-top: 15px;">
+                        <li>✅ Cybersecurity Fundamentals</li>
+                        <li>✅ Cyber History & Attacks</li>
+                        <li>✅ Password Protection & 2FA</li>
+                        <li>✅ Phishing Detection</li>
+                        <li>✅ Software Updates & Patches</li>
+                    </ul>
+                    <p style="margin-top: 30px; color: #667eea; font-style: italic;">Awarded by Darbz and the Cybersecurity Academy</p>
+                    <p style="margin-top: 20px; font-size: 48px;">🐕 🛡️ 🎓</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <section class="module-nav">
+            <a href="module5.html" class="nav-button prev">← Module 5: Updates & Protection</a>
+            <a href="index.html" class="nav-button next">Home 🏠</a>
+        </section>
+    </main>
+
+    <!-- Darbz Mascot -->
+    <div id="darbz-container" class="darbz-container">
+        <div class="darbz-mascot" onclick="toggleDarbzSpeech()">
+            🐕
+        </div>
+        <div id="darbz-speech" class="darbz-speech hidden">
+            <p id="darbz-message">Click me to hear from Darbz!</p>
+            <div class="speech-pointer"></div>
+        </div>
+    </div>
+
+    <script src="mascot.js"></script>
+    <script>
+        const challengeQuestions = [
+            {
+                question: "What does cybersecurity protect?",
+                options: ["Just computers", "Computers and personal information from hackers", "Only passwords", "Nothing important"],
+                correct: 1,
+                category: "welcome"
+            },
+            {
+                question: "When did the first computer virus spread?",
+                options: ["1960s", "1988", "2000", "2020"],
+                correct: 1,
+                category: "history"
+            },
+            {
+                question: "What is the STRONGEST password?",
+                options: ["password123", "MyBirthday1985", "K9$mP!xY#7vL2", "abc123"],
+                correct: 2,
+                category: "password"
+            },
+            {
+                question: "What does 2FA stand for?",
+                options: ["2 Fun Activities", "Two-Factor Authentication", "Two Friends Always", "Too Fake Attempts"],
+                correct: 1,
+                category: "2fa"
+            },
+            {
+                question: "Which is a RED FLAG for phishing?",
+                options: ["Normal greeting", "Asking you to click NOW or account closes", "Your real name in email", "Polite writing"],
+                correct: 1,
+                category: "phishing"
+            },
+            {
+                question: "What do security patches do?",
+                options: ["Make devices slower", "Fix security holes", "Delete files", "Cost money"],
+                correct: 1,
+                category: "updates"
+            },
+            {
+                question: "What is a firewall?",
+                options: ["A real fire", "A type of password", "A security guard for networks", "An old computer"],
+                correct: 2,
+                category: "history"
+            },
+            {
+                question: "What should you NEVER do in an email?",
+                options: ["Reply to spam", "Check who sent it", "Enter your password", "Ask for contact info"],
+                correct: 2,
+                category: "phishing"
+            },
+            {
+                question: "Why are smartphones harder to protect?",
+                options: ["They're too small", "We protect phones AND computers", "They don't need protection", "Everyone uses different phones"],
+                correct: 1,
+                category: "history"
+            },
+            {
+                question: "What should you do when you see an update available?",
+                options: ["Ignore it forever", "Wait a few years", "Install it as soon as possible", "Ask your friends"],
+                correct: 2,
+                category: "updates"
+            }
+        ];
+
+        let currentQuestion = 0;
+        let score = 0;
+
+        function displayQuestion() {
+            if (currentQuestion >= challengeQuestions.length) {
+                showFinalResult();
+                return;
+            }
+
+            const question = challengeQuestions[currentQuestion];
+            const container = document.getElementById('challenge-container');
+            
+            let optionsHTML = '';
+            question.options.forEach((option, index) => {
+                optionsHTML += `<div class="quiz-option" onclick="answerChallenge(${index})">${option}</div>`;
+            });
+
+            container.innerHTML = `
+                <div class="quiz-question">
+                    <p><strong>Question ${currentQuestion + 1} of ${challengeQuestions.length}:</strong></p>
+                    <p>${question.question}</p>
+                    <div class="quiz-options">
+                        ${optionsHTML}
+                    </div>
+                    <div id="feedback" class="feedback-message"></div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${(currentQuestion / challengeQuestions.length) * 100}%"></div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function answerChallenge(selectedIndex) {
+            const question = challengeQuestions[currentQuestion];
+            const isCorrect = selectedIndex === question.correct;
+            const feedback = document.getElementById('feedback');
+            
+            if (isCorrect) {
+                score++;
+                feedback.innerHTML = '✅ CORRECT! Awesome job!';
+                feedback.style.color = '#43e97b';
+                playSound('correct');
+                showRandomResponse(question.category);
+            } else {
+                feedback.innerHTML = `❌ Not quite! The correct answer is: <strong>${question.options[question.correct]}</strong>`;
+                feedback.style.color = '#ff6348';
+                playSound('incorrect');
+                showRandomResponse('encouragement');
+            }
+
+            // Disable all options
+            document.querySelectorAll('.quiz-option').forEach(opt => {
+                opt.style.pointerEvents = 'none';
+                opt.style.opacity = '0.6';
+            });
+
+            // Move to next question
+            setTimeout(() => {
+                currentQuestion++;
+                displayQuestion();
+            }, 2000);
+        }
+
+        function showFinalResult() {
+            const resultDiv = document.getElementById('challenge-result');
+            const resultContent = document.getElementById('result-content');
+            const percentage = (score / challengeQuestions.length) * 100;
+            const passed = score >= 8;
+
+            let resultHTML = `
+                <div style="text-align: center;">
+                    <h2 style="font-size: 36px; margin-bottom: 20px;">${passed ? '🎉 CONGRATULATIONS!' : '😊 Good Try!'}</h2>
+                    <p style="font-size: 24px; color: #667eea; margin-bottom: 20px;">Your Score: <strong>${score} out of ${challengeQuestions.length}</strong></p>
+                    <p style="font-size: 18px; margin-bottom: 20px;">${percentage.toFixed(0)}% Correct</p>
+            `;
+
+            if (passed) {
+                resultHTML += `
+                    <p style="color: #43e97b; font-weight: bold; font-size: 18px; margin-bottom: 30px;">
+                        🦸 You are now a CYBER GUARDIAN! 🦸
+                    </p>
+                    <p style="margin-bottom: 20px;">You've earned your certificate! Scroll down to see it!</p>
+                `;
+                document.getElementById('certificate-section').classList.remove('hidden');
+                playSound('correct');
+            } else {
+                resultHTML += `
+                    <p style="color: #ffa502; font-weight: bold; font-size: 18px; margin-bottom: 30px;">
+                        Almost there! You need 8 out of 10 to pass.
+                    </p>
+                    <p style="margin-bottom: 20px;">Review the modules and try again!</p>
+                `;
+                playSound('incorrect');
+            }
+
+            resultHTML += `
+                    <p style="font-size: 16px; margin-top: 30px;">
+                        ${passed ? '🐕 Darbz says: You\'re PAWSOME! Keep staying secure!' : '🐕 Darbz says: You\'re doing great! Practice makes perfect!'}
+                    </p>
+                </div>
+            `;
+
+            resultContent.innerHTML = resultHTML;
+            resultDiv.classList.remove('hidden');
+            document.getElementById('challenge-container').innerHTML = '';
+            
+            showRandomResponse(passed ? 'random' : 'encouragement');
+        }
+
+        function resetChallenge() {
+            currentQuestion = 0;
+            score = 0;
+            document.getElementById('challenge-result').classList.add('hidden');
+            document.getElementById('certificate-section').classList.add('hidden');
+            displayQuestion();
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            initDabzr();
+            displayQuestion();
+            showRandomResponse('welcome');
+        });
+
+        function toggleDarbzSpeech() {
+            const speech = document.getElementById('darbz-speech');
+            speech.classList.toggle('hidden');
+            playSound('bark');
+            showRandomResponse('random');
+        }
+    </script>
+
+    <style>
+        .challenge-container {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .challenge-result {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 20px 0;
+            color: white;
+            text-align: center;
+        }
+
+        .certificate {
+            background: linear-gradient(135deg, #ffd89b 0%, #ffd89b 100%);
+            border: 8px solid #667eea;
+            border-radius: 15px;
+            padding: 40px;
+            margin: 30px 0;
+            text-align: center;
+            color: #333;
+            box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4);
+        }
+
+        .certificate-header {
+            font-size: 28px;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 30px;
+            text-decoration: underline;
+        }
+
+        .certificate-body {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .certificate-body ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .certificate-body li {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #eee;
+            border-radius: 4px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            .challenge-container {
+                padding: 20px;
+            }
+
+            .certificate {
+                padding: 25px;
+                border-width: 5px;
+            }
+
+            .certificate-header {
+                font-size: 22px;
+            }
+
+            .certificate-body {
+                font-size: 14px;
+            }
+        }
+    </style>
+</body>
+</html>

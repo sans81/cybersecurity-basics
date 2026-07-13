@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 2: The Cyber Story - Cybersecurity Basics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="animated-header">
+        <nav class="nav-breadcrumb">
+            <a href="index.html">🏠 Home</a> / <span>Module 2: The Cyber Story</span>
+        </nav>
+        <h1>📚 The Cyber Story</h1>
+        <p class="subtitle">Travel through history and learn how cybersecurity was born! 🌍</p>
+    </header>
+
+    <main class="module-container">
+        <!-- Module Intro -->
+        <section class="intro-section">
+            <h2>🕐 A Journey Through Time</h2>
+            <p>Cybersecurity didn't start yesterday! Let's explore how it all began and the important moments that shaped it.</p>
+            <p style="color: #667eea; font-weight: bold;">Click on each year to learn what happened! 👇</p>
+        </section>
+
+        <!-- Interactive Timeline -->
+        <section class="timeline-section">
+            <div class="timeline">
+                <div class="timeline-item" onclick="showTimelineDetail(this, 'Started with computers and the internet being born. No one thought about security yet!')">
+                    <div class="timeline-year">1960s-70s</div>
+                    <div class="timeline-title">🖥️ The Computer Age Begins</div>
+                </div>
+
+                <div class="timeline-item" onclick="showTimelineDetail(this, 'The first computer WORM virus spreads! It was called the Morris Worm. People realized security matters!')">
+                    <div class="timeline-year">1988</div>
+                    <div class="timeline-title">🦠 The First Computer Virus</div>
+                </div>
+
+                <div class="timeline-item" onclick="showTimelineDetail(this, 'Companies started building firewalls to protect their computers. It\\'s like a security guard for networks!')">
+                    <div class="timeline-year">1990s</div>
+                    <div class="timeline-title">🔥 Firewalls Protect Networks</div>
+                </div>
+
+                <div class="timeline-item" onclick="showTimelineDetail(this, 'The famous Yahoo, eBay, and Amazon attacks! Hackers tried to take down huge websites. This was called a DDoS attack.')">
+                    <div class="timeline-year">2000</div>
+                    <div class="timeline-title">⚡ The Great Website Attacks</div>
+                </div>
+
+                <div class="timeline-item" onclick="showTimelineDetail(this, 'Passwords became more important. People started using uppercase, numbers, and symbols to make passwords stronger!')">
+                    <div class="timeline-year">2000s</div>
+                    <div class="timeline-title">🔐 Password Power Grows</div>
+                </div>
+
+                <div class="timeline-item" onclick="showTimelineDetail(this, 'Smartphones became popular! Now we had to protect phones AND computers. Security got way more complicated!')">
+                    <div class="timeline-year">2010s</div>
+                    <div class="timeline-title">📱 Mobile Security Era</div>
+                </div>
+
+                <div class="timeline-item" onclick="showTimelineDetail(this, 'Huge companies like Equifax got hacked! Millions of people\\'s information was stolen. Security became SUPER important!')">
+                    <div class="timeline-year">2017</div>
+                    <div class="timeline-title">🚨 Major Data Breaches</div>
+                </div>
+
+                <div class="timeline-item" onclick="showTimelineDetail(this, 'Artificial Intelligence and machine learning help protect us! AI can now spot attacks before they happen!')">
+                    <div class="timeline-year">2020s</div>
+                    <div class="timeline-title">🤖 AI Joins the Fight</div>
+                </div>
+            </div>
+            <div id="timeline-detail" class="timeline-detail hidden">
+                <p id="detail-text"></p>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section class="quiz-section">
+            <h2>🧠 Test Your Cyber History Knowledge!</h2>
+            
+            <div class="quiz-container">
+                <div class="quiz-question">
+                    <p><strong>Question 1:</strong> When did the first computer virus spread?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'history')">1960s</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, true, 'history')">1988</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'history')">2000</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'history')">2010</div>
+                    </div>
+                    <div id="q1-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 2:</strong> What is a firewall?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'history')">A real fire that protects computers</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'history')">A type of password</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, true, 'history')">A security guard for networks</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'history')">An old computer</div>
+                    </div>
+                    <div id="q2-feedback"></div>
+                </div>
+
+                <div class="quiz-question">
+                    <p><strong>Question 3:</strong> Why did smartphones make cybersecurity harder?</p>
+                    <div class="quiz-options">
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'history')">Smartphones are too small</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, true, 'history')">Now we protect phones AND computers</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'history')">Smartphones don't need protection</div>
+                        <div class="quiz-option" onclick="checkAnswer(this, false, 'history')">Everyone uses different phones</div>
+                    </div>
+                    <div id="q3-feedback"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fun Fact -->
+        <section class="fun-fact-section">
+            <div class="fun-fact-card">
+                <h3>🎓 Fun Cyber Fact!</h3>
+                <p>The word "CYBERSECURITY" comes from "CYBER" (related to computers) + "SECURITY" (staying safe). So it literally means "keeping computers safe!" 🤓</p>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <section class="module-nav">
+            <a href="module1.html" class="nav-button prev">← Module 1: What is Cybersecurity?</a>
+            <a href="module3.html" class="nav-button next">Module 3: Passwords & 2FA →</a>
+        </section>
+    </main>
+
+    <!-- Darbz Mascot -->
+    <div id="darbz-container" class="darbz-container">
+        <div class="darbz-mascot" onclick="toggleDarbzSpeech()">
+            🐕
+        </div>
+        <div id="darbz-speech" class="darbz-speech hidden">
+            <p id="darbz-message">Click me to hear from Darbz!</p>
+            <div class="speech-pointer"></div>
+        </div>
+    </div>
+
+    <script src="mascot.js"></script>
+    <script>
+        function showTimelineDetail(element, text) {
+            const detail = document.getElementById('timeline-detail');
+            const detailText = document.getElementById('detail-text');
+            
+            // Remove active class from all items
+            document.querySelectorAll('.timeline-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Add active to clicked item
+            element.classList.add('active');
+            
+            // Update detail text
+            detailText.textContent = text;
+            detail.classList.remove('hidden');
+            
+            // Show Darbz response
+            showRandomResponse('encouragement');
+        }
+
+        function checkAnswer(element, isCorrect, category) {
+            element.classList.add(isCorrect ? 'correct' : 'incorrect');
+            
+            // Find the feedback div for this question
+            const question = element.closest('.quiz-question');
+            const feedbackDiv = question.querySelector('[id$="-feedback"]');
+            
+            if (isCorrect) {
+                feedbackDiv.innerHTML = '<div class="feedback-message correct-feedback">✅ Correct! Great job!</div>';
+                playSound('correct');
+                showRandomResponse(category);
+            } else {
+                feedbackDiv.innerHTML = '<div class="feedback-message incorrect-feedback">❌ Try again! You\'ve got this!</div>';
+                playSound('incorrect');
+                showRandomResponse('encouragement');
+            }
+            
+            // Disable all options for this question
+            question.querySelectorAll('.quiz-option').forEach(opt => {
+                opt.style.pointerEvents = 'none';
+                opt.style.opacity = '0.6';
+            });
+        }
+
+        // Initialize Darbz
+        document.addEventListener('DOMContentLoaded', function() {
+            initDabzr();
+            showRandomResponse('welcome');
+        });
+
+        function toggleDarbzSpeech() {
+            const speech = document.getElementById('darbz-speech');
+            speech.classList.toggle('hidden');
+            playSound('bark');
+            showRandomResponse('random');
+        }
+    </script>
+</body>
+</html>
