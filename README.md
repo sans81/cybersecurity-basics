@@ -25,41 +25,47 @@ This is an **open-source, interactive educational website** designed to teach ki
 
 ---
 
-## 🎯 6 Interactive Modules
+## 🎯 7 Interactive Modules
 
-### Module 1: 🌍 What is Cybersecurity?
+### [Module 1: 🌍 What is Cybersecurity?](module1.html)
 - Learn the basics and why it matters
 - **Game**: Spot the Threat! (identify safe vs unsafe practices)
 - **Quiz**: 2 questions to test your knowledge
 
-### Module 2: 📚 The Cyber Story
+### [Module 2: 📚 The Cyber Story](module2.html)
 - Travel through history (1960s-2024)
 - Learn about famous cyber attacks
 - **Game**: Timeline interactive events
 - **Quiz**: Test your history knowledge
 
-### Module 3: 🔐 Passwords & 2FA
+### [Module 3: 🔐 Passwords & 2FA](module3.html)
 - Create super strong passwords
 - Learn Two-Factor Authentication
 - **Game**: Password Strength Checker
 - **Quiz**: Master password concepts
 
-### Module 4: 🚨 Phishing Detective
+### [Module 4: 🚨 Phishing Detective](module4.html)
 - Learn to spot fake emails
 - Understand social engineering
 - **Game**: Phishing Email Detector
 - **Quiz**: Identify real vs fake emails
 
-### Module 5: ⚡ Updates & Protection
+### [Module 5: ⚡ Updates & Protection](module5.html)
 - Why updates are critical
 - How patches protect you
 - **Game**: Update Race!
 - **Quiz**: Security maintenance concepts
 
-### Module 6: 🏆 Final Challenge
+### [Module 6: 🏆 Final Challenge](module6.html)
 - Comprehensive quiz combining all modules
 - Test ALL your cyber superpowers
 - **Reward**: Certificate and Darbz celebration!
+
+### [Bonus: 🚨 Internet Stranger Safety](bonus-stranger-safety.html)
+- Learn why talking to internet strangers is dangerous
+- **Interactive Darbz Talk**: Darbz explains the risks
+- **Game**: Spot safe vs dangerous interactions
+- **Quiz**: Recognize red flags and stay safe!
 
 ---
 
