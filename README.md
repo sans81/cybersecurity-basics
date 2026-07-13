@@ -27,41 +27,41 @@ This is an **open-source, interactive educational website** designed to teach ki
 
 ## 🎯 7 Interactive Modules
 
-### [Module 1: 🌍 What is Cybersecurity?](module1.html)
+### [Module 1: 🌍 What is Cybersecurity?](https://sans81.github.io/cybersecurity-basics/module1.html)
 - Learn the basics and why it matters
 - **Game**: Spot the Threat! (identify safe vs unsafe practices)
 - **Quiz**: 2 questions to test your knowledge
 
-### [Module 2: 📚 The Cyber Story](module2.html)
+### [Module 2: 📚 The Cyber Story](https://sans81.github.io/cybersecurity-basics/module2.html)
 - Travel through history (1960s-2024)
 - Learn about famous cyber attacks
 - **Game**: Timeline interactive events
 - **Quiz**: Test your history knowledge
 
-### [Module 3: 🔐 Passwords & 2FA](module3.html)
+### [Module 3: 🔐 Passwords & 2FA](https://sans81.github.io/cybersecurity-basics/module3.html)
 - Create super strong passwords
 - Learn Two-Factor Authentication
 - **Game**: Password Strength Checker
 - **Quiz**: Master password concepts
 
-### [Module 4: 🚨 Phishing Detective](module4.html)
+### [Module 4: 🚨 Phishing Detective](https://sans81.github.io/cybersecurity-basics/module4.html)
 - Learn to spot fake emails
 - Understand social engineering
 - **Game**: Phishing Email Detector
 - **Quiz**: Identify real vs fake emails
 
-### [Module 5: ⚡ Updates & Protection](module5.html)
+### [Module 5: ⚡ Updates & Protection](https://sans81.github.io/cybersecurity-basics/module5.html)
 - Why updates are critical
 - How patches protect you
 - **Game**: Update Race!
 - **Quiz**: Security maintenance concepts
 
-### [Module 6: 🏆 Final Challenge](module6.html)
+### [Module 6: 🏆 Final Challenge](https://sans81.github.io/cybersecurity-basics/module6.html)
 - Comprehensive quiz combining all modules
 - Test ALL your cyber superpowers
 - **Reward**: Certificate and Darbz celebration!
 
-### [Bonus: 🚨 Internet Stranger Safety](bonus-stranger-safety.html)
+### [Bonus: 🚨 Internet Stranger Safety](https://sans81.github.io/cybersecurity-basics/bonus-stranger-safety.html)
 - Learn why talking to internet strangers is dangerous
 - **Interactive Darbz Talk**: Darbz explains the risks
 - **Game**: Spot safe vs dangerous interactions
